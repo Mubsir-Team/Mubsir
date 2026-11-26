@@ -33,7 +33,7 @@ Test prevalence (38%) is far higher than in production, so precision will be low
 | `config/` | Feature allowlist, eligible users, the grouped train/test split, CV folds, pre-registered selection rules |
 | `data/` | `model_dataset_995.parquet`: 100 features and labels for every employee-workday |
 | `results/` | Machine-readable results of every pipeline step, including the pre-test freeze (`results/pretest/freeze.json`) |
-| `reports/` | One Markdown report per pipeline step, plus the stage audits and pre-registrations |
+| `reports/` | One Markdown report per pipeline step, plus the stage audits and pre-registrations. `reports/dataset_audit.md` is the pre-training dataset audit, with the feature decisions and the reason 147 users stay out of the test set |
 | `work/` | Intermediate outputs (labels, out-of-fold scores, tuning runs, frozen test scores) that the studies read |
 | `audit/` | Independent audit scripts run before Stage A, Stage B and the test |
 | `studies/` | Five pre-registered research studies run after the model was frozen (see `studies/README.md`) |

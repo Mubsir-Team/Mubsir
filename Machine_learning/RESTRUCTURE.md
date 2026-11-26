@@ -48,6 +48,14 @@ New files: `README.md`, `.gitignore`, `RESTRUCTURE.md`, `studies/README.md`, `ar
 Some records still use the old folder names, because they describe the runs as they happened: reports, logs,
 `INPUTS.md`, `hashes_*.json` and docstrings.
 
+## Correction (same day)
+
+`audit_summary.md` was first classed as unimportant. In fact it records the feature decisions (§8.1) and the switching
+analysis (§8.4). Those decisions are the reason the 147 users of the preliminary `val` split were kept out of the
+test set, and `pipeline/02_make_split.py` cites them.
+
+An English translation was therefore added as `reports/dataset_audit.md`. The Arabic original stays in `archive/`.
+
 ## Verification
 
 - Every file was SHA-256 hashed before the move: 595 files, excluding `.venv` and `__pycache__`.
