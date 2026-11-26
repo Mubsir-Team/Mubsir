@@ -36,7 +36,7 @@ Test prevalence (38%) is far higher than in production, so precision will be low
 | `reports/` | One Markdown report per pipeline step, plus the stage audits and pre-registrations. `reports/dataset_audit.md` is the pre-training dataset audit, with the feature decisions and the reason 147 users stay out of the test set |
 | `work/` | Intermediate outputs (labels, out-of-fold scores, tuning runs, frozen test scores) that the studies read |
 | `audit/` | Independent audit scripts run before Stage A, Stage B and the test |
-| `studies/` | Five pre-registered research studies run after the model was frozen (see `studies/README.md`) |
+| `studies/` | Six pre-registered research studies run after the model was frozen (see `studies/README.md`) |
 | `RESTRUCTURE.md` | Record of the v2 folder restructure (what moved where, and the hash check) |
 
 The following stay **local and are not part of this repository** (see `.gitignore`):
@@ -90,3 +90,4 @@ integrity hashes. Studies use development data only and never modify a frozen fi
 | `controlled_rotation` | Do explicit switching features add a signal? | No; rotation is detected through aggregate deviation |
 | `switching_baseline` | Does switching relative to the employee's 2010 habit help? | No meaningful added value |
 | `switching_weight` | Does up-weighting switching features in training help? | No; at weight 10 it lowers detection by 2.8 points |
+| `learning_curve` | What detection is lost by reserving 13.7% of users for the test set? | Little: +0.57 points at 3% FPR (90% CI +0.05 to +1.15) |

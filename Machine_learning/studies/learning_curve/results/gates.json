@@ -1,0 +1,178 @@
+{
+ "preregistration_sha256": "5be9e0289975bcc33025dd7abc430b153ac7506fb2a382e4b97eec8c98a96d45",
+ "g1_passed": true,
+ "g2_passed": true,
+ "g3_passed": true,
+ "consequence": "proceed",
+ "checks": [
+  {
+   "gate": "G3",
+   "check": "pipeline/01_build_labels.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/02_make_split.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/03_verify_inputs.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/04_cv_compare.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/05_tune.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/06_ablations.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/07_calibrate_fit.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/08_evaluate_test.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/09_breakdown.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/10_shap.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/11_latency.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/12_verify_release.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/13_user_classification.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/14_row_threshold_metrics.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/common.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/metrics.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/models.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "config/cv_folds.csv identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "config/user_meta.csv identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "config/selection_rules.json identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "data/model_dataset_995.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "work/labels.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "realised size within \u00b16% of f x n_fit (all arms)",
+   "passed": true,
+   "detail": "range -0.014 .. +0.056"
+  },
+  {
+   "gate": "G2",
+   "check": "realised size within \u00b12% for F86",
+   "passed": true,
+   "detail": "range -0.005 .. +0.007"
+  },
+  {
+   "gate": "G2",
+   "check": "smaller arms are subsets of larger ones",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "every stratum keeps at least one user",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "no user outside the fold's fit users",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "F100 OOF == Stage A OOF exactly (3 repeats)",
+   "passed": true,
+   "detail": "max |diff| 0.00e+00"
+  }
+ ],
+ "seconds": 170
+}

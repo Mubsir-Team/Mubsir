@@ -1,0 +1,14 @@
+{
+ "params": {
+  "a": 0.9645928309450451,
+  "b": 1.351081241493737,
+  "c": 0.4970165869417056
+ },
+ "predicted_det_3pct_at_fit_sizes": {
+  "cv_scale_588": 0.9078050370176816,
+  "final_scale_859_users": 0.9175559846299783,
+  "final_scale_995_users": 0.9208694568801574
+ },
+ "predicted_gain_adding_test_users_at_final_scale": 0.0033134722501790836,
+ "note": "MODEL-BASED EXTRAPOLATION, not a measurement. Det(n) = a - b*n^-c fitted to the six arm means (n = mean fit users per fold)."
+}
