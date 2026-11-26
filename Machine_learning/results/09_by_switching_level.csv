@@ -1,0 +1,4 @@
+switching_level,dev_attackers,dev_detected@85,dev_range_3_repeats,dev_latency_median,dev_latency_p90,dev_row_pr_auc,test_attackers,test_detected@85,test_rate_95CI,test_latency_median,test_row_pr_auc,small_cell
+High,115,0.9014492753623188,0.89-0.91,2.0,8.0,0.9118914768609274,18,14/18,0.52-0.94,3.5,0.8909521717266706,
+Low,117,0.868945868945869,0.85-0.89,2.0,7.0,0.9183750725654543,16,15/16,0.70-1.00,2.0,0.9363529555919908,
+Medium,116,0.9482758620689656,0.95-0.95,3.0,8.0,0.9302214813409379,18,18/18,0.81-1.00,3.0,0.9689438105548026,

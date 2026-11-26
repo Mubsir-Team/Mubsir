@@ -1,0 +1,139 @@
+{
+ "seed": 42,
+ "bootstrap_resamples": 1000,
+ "eps_clip": 1e-07,
+ "baseline": {
+  "aggregation": "max daily risk over the whole observation period",
+  "threshold": 85.0
+ },
+ "max_thresholds": [
+  70,
+  75,
+  80,
+  85,
+  90,
+  92.63198568310092
+ ],
+ "score_thresholds": [
+  60,
+  70,
+  75,
+  80,
+  85,
+  90
+ ],
+ "percentile_thresholds": [
+  50,
+  60,
+  70,
+  80,
+  85
+ ],
+ "ewma_thresholds": [
+  60,
+  70,
+  80,
+  85,
+  90
+ ],
+ "ewma_half_lives_workdays": [
+  5,
+  10
+ ],
+ "ewma_formula": "e_t = lam * risk_t + (1 - lam) * e_(t-1), e_0 = risk_0, lam = 1 - 2^(-1/half_life)",
+ "top_k": [
+  3,
+  5
+ ],
+ "percentiles": [
+  90,
+  95
+ ],
+ "fixed_windows": {
+  "first": [
+   30,
+   60
+  ],
+  "last": [
+   30,
+   60
+  ]
+ },
+ "persistence": {
+  "thresholds": [
+   80,
+   85,
+   90
+  ],
+  "rules_k_of_w": [
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    5
+   ]
+  ],
+  "escalation_on_2of3": {
+   "thresholds": [
+    80,
+    85
+   ],
+   "escalate_above": [
+    95,
+    98
+   ]
+  }
+ },
+ "iso_fpr_targets": [
+  0.01,
+  0.03
+ ],
+ "iso_fpr_method": "threshold per OOF repeat and validation fold, from the scores of benign users in the OTHER 4 folds",
+ "exposure_adjusted": {
+  "alphas": [
+   0.01,
+   0.03
+  ],
+  "reference": "benign users of the other 4 folds (same repeat); all sliding windows of the user's length; each reference user weighted equally",
+  "rule": "alert iff max daily risk over n days > T_alpha(n), T_alpha(n) = weighted (1-alpha) quantile of benign window maxima of length n"
+ },
+ "horizons_workdays": [
+  10,
+  20,
+  30,
+  60,
+  90
+ ],
+ "horizon_start_rule": "benign: the first H workdays of the observation period (and, as robustness, every sliding H-window); attackers: the H workdays starting at the first injected attack day",
+ "mixed_duration_experiment": {
+  "draws": 20,
+  "horizons": [
+   10,
+   20,
+   30,
+   60,
+   90
+  ],
+  "rule": "each dev user gets one H uniformly at random; benign: window start uniform over valid starts; attackers: window start uniform among starts whose window contains the first injected day"
+ },
+ "incident_cooldown_workdays": 5,
+ "workdays_per_employee_month": 21,
+ "duration_groups_workdays": [
+  0,
+  30,
+  60,
+  90,
+  104,
+  200
+ ]
+}

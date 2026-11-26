@@ -1,0 +1,36 @@
+SW-only refit reproduces stored case scores: True
+
+What SW-only learned on dev (validation rows, repeat 0):
+                       feature  spearman_value_vs_shap  mean_abs_shap  mean_benign_rows  mean_attack_rows
+               nr_handoff_20wd                   0.833          0.635             0.696             3.789
+               nr_handoff_10wd                   0.855          0.284             0.365             2.128
+                   nr_alt_20wd                  -0.303          0.196             0.214             0.405
+                   nr_alt_10wd                   0.392          0.150             0.157             0.399
+             nr_gap_alt_2_10wd                   0.757          0.142             0.212             0.412
+dominant_channel_switches_30wd                  -0.669          0.118             6.510             8.424
+             nr_gap_alt_2_20wd                   0.051          0.118             0.262             0.409
+dominant_channel_switches_20wd                  -0.727          0.103             4.457             5.806
+dominant_channel_switches_10wd                  -0.606          0.096             2.156             2.872
+              nr_gap_alt_2_5wd                   0.743          0.088             0.144             0.378
+ dominant_channel_switches_5wd                  -0.668          0.058             0.918             1.258
+                    nr_alt_5wd                   0.673          0.038             0.099             0.342
+                nr_handoff_5wd                   0.430          0.034             0.187             1.080
+
+In-span case rows, mean value / mean SHAP:
+                                         mean_shap_in_span                         mean_value_in_span                         
+variant                                                BLK FIX-EMAIL    ROT    SIM                BLK FIX-EMAIL     ROT    SIM
+feature                                                                                                                       
+(total log-odds from switching features)             2.408     1.763  1.747  1.185                NaN       NaN     NaN    NaN
+dominant_channel_switches_10wd                      -0.043     0.016 -0.069 -0.037              2.976     1.910   5.497  2.610
+dominant_channel_switches_20wd                      -0.046     0.017 -0.130 -0.053              6.450     4.848  10.430  5.937
+dominant_channel_switches_30wd                      -0.042     0.011 -0.279 -0.035             10.154     8.548  14.157  9.650
+dominant_channel_switches_5wd                       -0.018     0.004 -0.014 -0.022              1.257     0.797   2.375  1.094
+nr_alt_10wd                                          0.355     0.164  0.055  0.285              0.341     0.140   0.827  0.337
+nr_alt_20wd                                          0.413     0.570 -0.223  0.394              0.367     0.163   0.829  0.348
+nr_alt_5wd                                           0.060     0.007  0.063  0.055              0.272     0.127   0.643  0.277
+nr_gap_alt_2_10wd                                    0.224     0.157  0.157  0.253              0.367     0.179   0.802  0.369
+nr_gap_alt_2_20wd                                    0.111     0.148 -0.069  0.123              0.384     0.209   0.781  0.375
+nr_gap_alt_2_5wd                                     0.140     0.041  0.093  0.117              0.312     0.167   0.663  0.321
+nr_handoff_10wd                                      0.360     0.198  0.562  0.010              2.341     1.321   4.887  0.734
+nr_handoff_20wd                                      0.859     0.384  1.560  0.069              3.698     2.298   7.324  1.597
+nr_handoff_5wd                                       0.035     0.046  0.042  0.027              1.180     0.670   2.453  0.372

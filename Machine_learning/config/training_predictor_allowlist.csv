@@ -1,0 +1,144 @@
+column_order,feature_name,column_role,category,dtype,null_rows,decision,reason
+1,user,Identifier,Identifier,string,0,exclude,Identifier (identity memorization)
+2,day,Identifier,Calendar,datetime64[ms],0,exclude,Temporal identifier (calendar shortcut)
+3,day_of_week,Behavioral Feature,Calendar,int32,0,exclude,Calendar field; positive rate flat across weekdays
+4,is_weekend,Behavioral Feature,Calendar,int32,0,exclude,Constant (always 0)
+5,email_event_count,Behavioral Feature,Email,int64,0,keep,
+6,email_send_count,Behavioral Feature,Email,float64,0,keep,
+7,email_view_count,Behavioral Feature,Email,float64,0,keep,
+8,external_email_count,Behavioral Feature,Email,float64,0,keep,
+9,internal_email_count,Behavioral Feature,Email,float64,0,keep,
+10,total_sent_email_bytes,Behavioral Feature,Email,float64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+11,external_email_bytes,Behavioral Feature,Email,float64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+12,emails_with_attachments,Behavioral Feature,Email,float64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+13,attachment_count,Behavioral Feature,Email,float64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+14,unique_external_recipients,Behavioral Feature,Email,int64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+15,unique_external_domains,Behavioral Feature,Email,int64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+16,file_event_count,Behavioral Feature,USB/File,int64,0,keep,
+17,file_copy_count,Behavioral Feature,USB/File,float64,0,keep,
+18,file_open_count,Behavioral Feature,USB/File,float64,0,keep,
+19,file_write_count,Behavioral Feature,USB/File,float64,0,keep,
+20,file_delete_count,Behavioral Feature,USB/File,float64,0,keep,
+21,usb_copy_count,Behavioral Feature,USB/File,float64,0,keep,
+22,from_removable_count,Behavioral Feature,USB/File,float64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+23,unique_usb_files,Behavioral Feature,USB/File,int64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+24,unique_usb_extensions,Behavioral Feature,USB/File,int64,0,exclude,Constant (always 0)
+25,http_event_count,Behavioral Feature,HTTP,int64,0,keep,
+26,www_visit_count,Behavioral Feature,HTTP,float64,0,keep,
+27,www_download_count,Behavioral Feature,HTTP,float64,0,keep,
+28,www_upload_count,Behavioral Feature,HTTP,float64,0,keep,
+29,unique_domains,Behavioral Feature,HTTP,int64,0,keep,
+30,unique_upload_domains,Behavioral Feature,HTTP,int64,0,exclude_C1,Companion field not updated by injection (dilution artifact)
+31,logon_count,Behavioral Feature,Logon,float64,0,keep,
+32,logoff_count,Behavioral Feature,Logon,float64,0,keep,
+33,first_logon,Behavioral Feature,Logon,datetime64[us],0,exclude,Raw datetime; derive hour-of-day separately if wanted
+34,last_logoff,Behavioral Feature,Logon,datetime64[us],0,exclude,Raw datetime; derive hour-of-day separately if wanted
+35,baseline_workdays,Historical Baseline Reference,Baseline,int64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+36,email_active_days,Historical Baseline Reference,Baseline,int64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+37,email_active_rate,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+38,email_count_p50,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+39,email_count_p90,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+40,email_count_p95,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+41,email_count_mad,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+42,email_bytes_p50,Historical Baseline Reference,Baseline,float64,0,exclude_C1,"Derived from external_email_bytes, which injection did not update"
+43,email_bytes_p90,Historical Baseline Reference,Baseline,float64,0,exclude_C1,"Derived from external_email_bytes, which injection did not update"
+44,email_bytes_p95,Historical Baseline Reference,Baseline,float64,0,exclude_C1,"Derived from external_email_bytes, which injection did not update"
+45,email_bytes_mad,Historical Baseline Reference,Baseline,float64,0,exclude_C1,"Derived from external_email_bytes, which injection did not update"
+46,usb_active_days,Historical Baseline Reference,Baseline,int64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+47,usb_active_rate,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+48,usb_copy_p50,Historical Baseline Reference,Baseline,float64,312211,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+49,usb_copy_p90,Historical Baseline Reference,Baseline,float64,312211,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+50,usb_copy_p95,Historical Baseline Reference,Baseline,float64,312211,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+51,usb_copy_mad,Historical Baseline Reference,Baseline,float64,312211,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+52,http_upload_active_days,Historical Baseline Reference,Baseline,int64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+53,http_upload_active_rate,Historical Baseline Reference,Baseline,float64,0,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+54,http_upload_p50,Historical Baseline Reference,Baseline,float64,328257,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+55,http_upload_p90,Historical Baseline Reference,Baseline,float64,328257,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+56,http_upload_p95,Historical Baseline Reference,Baseline,float64,328257,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+57,http_upload_mad,Historical Baseline Reference,Baseline,float64,328257,exclude_C2,Raw 2010 baseline value; user-profile shortcut (user-level AUC up to 0.79 within 995). Still used inside derived deviation features.
+58,email_active_today,Behavioral Feature,Behavior,int64,0,keep,
+59,usb_active_today,Behavioral Feature,Behavior,int64,0,keep,
+60,http_upload_active_today,Behavioral Feature,Behavior,int64,0,keep,
+61,active_channel_count,Behavioral Feature,Cross-Channel,int64,0,keep,
+62,email_count_above_p95,Behavioral Feature,Baseline-Relative,int64,0,keep,
+63,email_bytes_above_p95,Behavioral Feature,Baseline-Relative,int64,0,exclude_C1,"Derived from external_email_bytes, which injection did not update"
+64,usb_copy_above_p95,Behavioral Feature,Baseline-Relative,int64,0,keep,
+65,http_upload_above_p95,Behavioral Feature,Baseline-Relative,int64,0,keep,
+66,email_count_to_p95_ratio,Behavioral Feature,Baseline-Relative,float64,0,keep,
+67,email_bytes_to_p95_ratio,Behavioral Feature,Baseline-Relative,float64,0,exclude_C1,"Derived from external_email_bytes, which injection did not update"
+68,usb_copy_to_p95_ratio,Behavioral Feature,Baseline-Relative,float64,312211,exclude_C2,NaN when user has no channel baseline (residual selection signal); no measurable gain. Replaced by E_usb_today / E_http_today.
+69,http_upload_to_p95_ratio,Behavioral Feature,Baseline-Relative,float64,328257,exclude_C2,NaN when user has no channel baseline (residual selection signal); no measurable gain. Replaced by E_usb_today / E_http_today.
+70,email_active_days_5wd,Behavioral Feature,Temporal,float64,0,keep,
+71,email_active_days_10wd,Behavioral Feature,Temporal,float64,0,keep,
+72,email_active_days_20wd,Behavioral Feature,Temporal,float64,0,keep,
+73,usb_active_days_5wd,Behavioral Feature,Temporal,float64,0,keep,
+74,usb_active_days_10wd,Behavioral Feature,Temporal,float64,0,keep,
+75,usb_active_days_20wd,Behavioral Feature,Temporal,float64,0,keep,
+76,http_active_days_5wd,Behavioral Feature,Temporal,float64,0,keep,
+77,http_active_days_10wd,Behavioral Feature,Temporal,float64,0,keep,
+78,http_active_days_20wd,Behavioral Feature,Temporal,float64,0,keep,
+79,external_email_count_5wd,Behavioral Feature,Temporal,float64,0,keep,
+80,usb_copy_count_5wd,Behavioral Feature,Temporal,float64,0,keep,
+81,http_upload_count_5wd,Behavioral Feature,Temporal,float64,0,keep,
+82,external_email_count_10wd,Behavioral Feature,Temporal,float64,0,keep,
+83,usb_copy_count_10wd,Behavioral Feature,Temporal,float64,0,keep,
+84,http_upload_count_10wd,Behavioral Feature,Temporal,float64,0,keep,
+85,multi_channel_days_10wd,Behavioral Feature,Cross-Channel,float64,0,keep,
+86,cumulative_deviation_5wd,Behavioral Feature,Temporal Deviation,float64,0,keep,
+87,cumulative_deviation_10wd,Behavioral Feature,Temporal Deviation,float64,0,keep,
+88,cumulative_deviation_20wd,Behavioral Feature,Temporal Deviation,float64,0,keep,
+89,cumulative_deviation_30wd,Behavioral Feature,Temporal Deviation,float64,0,keep,
+90,combined_channel_intensity_5wd,Behavioral Feature,Cross-Channel Intensity,float64,0,keep,
+91,combined_channel_intensity_10wd,Behavioral Feature,Cross-Channel Intensity,float64,0,keep,
+92,combined_channel_intensity_20wd,Behavioral Feature,Cross-Channel Intensity,float64,0,keep,
+93,combined_channel_intensity_30wd,Behavioral Feature,Cross-Channel Intensity,float64,0,keep,
+94,dominant_channel_switches_5wd,Behavioral Feature,Behavioral Channel Rotation,float64,0,keep,
+95,dominant_channel_switches_10wd,Behavioral Feature,Behavioral Channel Rotation,float64,0,keep,
+96,dominant_channel_switches_20wd,Behavioral Feature,Behavioral Channel Rotation,float64,0,keep,
+97,dominant_channel_switches_30wd,Behavioral Feature,Behavioral Channel Rotation,float64,0,keep,
+98,channel_distribution_shift_5wd,Behavioral Feature,Cross-Channel Distribution,float64,32420,keep,
+99,channel_distribution_shift_10wd,Behavioral Feature,Cross-Channel Distribution,float64,16262,keep,
+100,channel_distribution_shift_20wd,Behavioral Feature,Cross-Channel Distribution,float64,7506,keep,
+101,channel_distribution_shift_30wd,Behavioral Feature,Cross-Channel Distribution,float64,5809,keep,
+102,consecutive_elevated_days_5wd,Behavioral Feature,Temporal Persistence,float64,0,keep,
+103,consecutive_elevated_days_10wd,Behavioral Feature,Temporal Persistence,float64,0,keep,
+104,consecutive_elevated_days_20wd,Behavioral Feature,Temporal Persistence,float64,0,keep,
+105,consecutive_elevated_days_30wd,Behavioral Feature,Temporal Persistence,float64,0,keep,
+106,cross_channel_deviation_days_5wd,Behavioral Feature,Cross-Channel Co-elevation,float64,0,keep,
+107,cross_channel_deviation_days_10wd,Behavioral Feature,Cross-Channel Co-elevation,float64,0,keep,
+108,cross_channel_deviation_days_20wd,Behavioral Feature,Cross-Channel Co-elevation,float64,0,keep,
+109,cross_channel_deviation_days_30wd,Behavioral Feature,Cross-Channel Co-elevation,float64,0,keep,
+110,external_email_count_20wd,Behavioral Feature,Temporal Channel Volume,float64,0,keep,
+111,usb_copy_count_20wd,Behavioral Feature,Temporal Channel Volume,float64,0,keep,
+112,http_upload_count_20wd,Behavioral Feature,Temporal Channel Volume,float64,0,keep,
+113,external_email_count_30wd,Behavioral Feature,Temporal Channel Volume,float64,0,keep,
+114,usb_copy_count_30wd,Behavioral Feature,Temporal Channel Volume,float64,0,keep,
+115,http_upload_count_30wd,Behavioral Feature,Temporal Channel Volume,float64,0,keep,
+116,nr_m_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+117,nr_m_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+118,nr_m_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+119,nr_entropy_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+120,nr_entropy_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+121,nr_entropy_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+122,nr_excl_days_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+123,nr_excl_days_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+124,nr_excl_days_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+125,nr_overlap_days_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+126,nr_overlap_days_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+127,nr_overlap_days_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+128,nr_alt_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+129,nr_alt_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+130,nr_alt_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+131,nr_handoff_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+132,nr_handoff_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+133,nr_handoff_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+134,nr_stealth_acc_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+135,nr_stealth_acc_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+136,nr_stealth_acc_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+137,nr_gap_alt_2_5wd,Behavioral Feature,New Rotation,float64,0,keep,
+138,nr_gap_alt_2_10wd,Behavioral Feature,New Rotation,float64,0,keep,
+139,nr_gap_alt_2_20wd,Behavioral Feature,New Rotation,float64,0,keep,
+140,email_count_to_p90_ratio,Behavioral Feature,Daily P90 Ratio,float64,0,keep,
+141,usb_copy_to_p90_ratio,Behavioral Feature,Daily P90 Ratio,float64,312211,exclude_C2,NaN when user has no channel baseline (residual selection signal); no measurable gain. Replaced by E_usb_today / E_http_today.
+142,http_upload_to_p90_ratio,Behavioral Feature,Daily P90 Ratio,float64,328257,exclude_C2,NaN when user has no channel baseline (residual selection signal); no measurable gain. Replaced by E_usb_today / E_http_today.
+143,y,Target — Not Predictor,Binary Target,int8,0,exclude,Target

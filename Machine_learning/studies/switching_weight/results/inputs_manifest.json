@@ -1,0 +1,122 @@
+[
+ {
+  "path": "Model/data/model_dataset_995.parquet",
+  "read_by": "train (via 05_tune.load; dev rows only)",
+  "role": "100 MUBSIR features",
+  "sha256": "1b26162ba13fd53f049e47608ea86efeb70d6ec42ba5839c9d7dda548337ddbc",
+  "bytes": 9614490,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/work/labels.parquet",
+  "read_by": "train (via 05_tune.load)",
+  "role": "y_10 labels",
+  "sha256": "1ba5e8204d5a859c2e37d275d5a0c72b2067857c689132ae0b17098d4684684a",
+  "bytes": 38264,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/work/eval_meta.parquet",
+  "read_by": "train (via 05_tune.load)",
+  "role": "per-row evaluation context",
+  "sha256": "e2a37f7216e509ce2fec92d8ed154fb2080c7f04199cbe0837ec67e91f2d2e80",
+  "bytes": 81056,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/work/oof/lightgbm_h10.parquet",
+  "read_by": "train (gate G1)",
+  "role": "Stage A OOF (reproduction check)",
+  "sha256": "e6f352160367bd9a207e12b965ecb46cc9a81478fe575b04a3edf8f8a02c9844",
+  "bytes": 2655543,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/config/final_split.csv",
+  "read_by": "train (via 05_tune.load)",
+  "role": "dev/test split (dev users only)",
+  "sha256": "f29ac70b0bfd1bbce3f1758519514df898ccc85008354d285812e535b47b7749",
+  "bytes": 39836,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/config/cv_folds.csv",
+  "read_by": "train, analyze",
+  "role": "existing 5x3 grouped CV folds",
+  "sha256": "141155356255dad421fadd751924501fbbb08d84526a30ebc41f07495b83ca85",
+  "bytes": 222727,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/config/user_meta.csv",
+  "read_by": "train, analyze",
+  "role": "attacker flag and strata (evaluation only)",
+  "sha256": "a32f7cc73660108386f27db5112f0b3856544220d28fdae02cb6c413a3b6940b",
+  "bytes": 74386,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/config/selection_rules.json",
+  "read_by": "train (hash check in 05_tune.load)",
+  "role": "registered selection rules",
+  "sha256": "41de4354e861fb08f2018d76ee1d35fe45cbd3b3b4af3a37a96fba70fdf5deb0",
+  "bytes": 10709,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/config/training_predictor_allowlist.csv",
+  "read_by": "train (via common.feature_list)",
+  "role": "frozen allowlist",
+  "sha256": "a223ba439611630194198cfc8aaaac13fbb87f8f81af2828426566a6905ceaf1",
+  "bytes": 15248,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/pipeline/common.py",
+  "read_by": "train",
+  "role": "frozen helpers (imported, not modified)",
+  "sha256": "c8d6970f329402b8a5d701a4210ae71c4c6156ada3ab3e3bf1f2d880460e1a43",
+  "bytes": 4702,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/pipeline/models.py",
+  "read_by": "train",
+  "role": "LightGBM constructor and defaults (_lgbm, MAX_TREES, ES_ROUNDS)",
+  "sha256": "17ccd5fb2d9ea73f44b2951b56eec395c0d9048be4967594e29e43ecd61c7bd6",
+  "bytes": 4458,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/pipeline/metrics.py",
+  "read_by": "analyze",
+  "role": "threshold_at_fpr",
+  "sha256": "91f0054022d8b6a2cac79ff6cc156aebee13f38346688f52a3333a48fab5a29e",
+  "bytes": 4753,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/pipeline/05_tune.py",
+  "read_by": "train",
+  "role": "frozen loader",
+  "sha256": "68071a8b1a3c07db995c6e4075caf9aeabd494ddef9eb1bca6c123a1a4b52578",
+  "bytes": 15172,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/study_controlled_rotation/data/counterfactual_cases.parquet",
+  "read_by": "train",
+  "role": "existing matched cases (P2), read-only",
+  "sha256": "005f137824f605751d2bff160777536f975bf2800331266c47a5252bf05a2928",
+  "bytes": 12384938,
+  "baseline": "unchanged vs hashes_before.json"
+ },
+ {
+  "path": "Model/study_switching_baseline/results/habit_2010_dev_users.csv",
+  "read_by": "analyze",
+  "role": "2010 habit (descriptive benign-alarm table only)",
+  "sha256": "adc39b4b1d94b5ab569690dd1d9760167bcee36c974fd071b51d6bb89f4b0d5e",
+  "bytes": 43863,
+  "baseline": "unchanged vs hashes_before.json"
+ }
+]

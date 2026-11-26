@@ -1,0 +1,8 @@
+{
+ "user_level_auc": 0.5722495198511993,
+ "folded_auc": 0.5722495198511993,
+ "threshold": 0.6,
+ "personal_norm_kept": true,
+ "users": 834,
+ "attackers": 323
+}

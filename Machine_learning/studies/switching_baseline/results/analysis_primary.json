@@ -1,0 +1,169 @@
+{
+ "preregistration_sha256": "55f15d44a978c58db6a45b73c9f077de042ede430cff31dac78abaafe4da6bef",
+ "populations": {
+  "P1_users": 714,
+  "P1_attackers": 347,
+  "P1_benign": 367,
+  "P2_hosts": 123,
+  "P2_cases": 1476
+ },
+ "det_P1_3pct": {
+  "A": 0.899135446685879,
+  "R": 0.899135446685879,
+  "H": 0.8943323727185399
+ },
+ "det_P1_1pct": {
+  "A": 0.8635926993275697,
+  "R": 0.8530259365994236,
+  "H": 0.8530259365994236
+ },
+ "det_P2_3pct": {
+  "A|ROT": 0.7981029810298101,
+  "A|BLK": 0.8279132791327914,
+  "R|ROT": 0.7994579945799459,
+  "R|BLK": 0.8197831978319783,
+  "H|ROT": 0.7818428184281841,
+  "H|BLK": 0.7994579945799459
+ },
+ "pr_auc": {
+  "A": 0.944208752537434,
+  "H": 0.9430082647138974
+ },
+ "primary": {
+  "id": "PRIMARY",
+  "estimand": "Delta1 = Det(H) - Det(A), P1 attackers, iso-FPR 3%",
+  "estimate": -0.004803073967339033,
+  "ci_low": -0.012487992315081797,
+  "ci_high": 0.0038424591738710516,
+  "p_two_sided": 0.271
+ },
+ "key_secondary": {
+  "id": "KEY",
+  "estimand": "Delta2 = Det(H) - Det(R), P1 attackers, iso-FPR 3%",
+  "estimate": -0.004803073967339033,
+  "ci_low": -0.011527377521613813,
+  "ci_high": 0.0019212295869355245,
+  "p_two_sided": 0.179
+ },
+ "secondary": [
+  {
+   "id": "S1",
+   "estimand": "Delta1 at iso-FPR 1%",
+   "estimate": -0.01056676272814605,
+   "ci_low": -0.02017291066282423,
+   "ci_high": -0.0009606147934677622,
+   "p_two_sided": 0.029,
+   "p_holm": 0.17400000000000002,
+   "significant_holm": false
+  },
+  {
+   "id": "S2",
+   "estimand": "Delta2 at iso-FPR 3%",
+   "estimate": -0.004803073967339033,
+   "ci_low": -0.011527377521613813,
+   "ci_high": 0.0019212295869355245,
+   "p_two_sided": 0.179,
+   "p_holm": 0.895,
+   "significant_holm": false
+  },
+  {
+   "id": "S3",
+   "estimand": "Delta2 low-habit (91) minus high-habit (132) attackers",
+   "estimate": 0.005050505050505083,
+   "ci_low": -0.014481830281519562,
+   "ci_high": 0.02523630209032188,
+   "p_two_sided": 0.623,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S4",
+   "estimand": "Delta1 High-switching minus Low-switching attackers",
+   "estimate": 0.011470985155195401,
+   "ci_low": -0.008620689655172379,
+   "ci_high": 0.03219977110262428,
+   "p_two_sided": 0.317,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S5",
+   "estimand": "P2: [H-A](ROT) - [H-A](BLK)",
+   "estimate": 0.012195121951219523,
+   "ci_low": -0.010840108401083959,
+   "ci_high": 0.035230352303522894,
+   "p_two_sided": 0.296,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S6",
+   "estimand": "P2: [H-R](ROT) - [H-R](BLK)",
+   "estimate": 0.0027100271002705734,
+   "ci_low": -0.021680216802167918,
+   "ci_high": 0.02574525745257461,
+   "p_two_sided": 0.868,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S7",
+   "estimand": "row-level PR-AUC(H) - PR-AUC(A), pooled P1 OOF",
+   "estimate": -0.0012004878235365446,
+   "ci_low": -0.0018837325884252993,
+   "ci_high": -0.0005860060612060376,
+   "p_two_sided": 0.0,
+   "p_holm": 0.0,
+   "significant_holm": true
+  }
+ ],
+ "r_minus_a": {
+  "id": "desc_R-A",
+  "estimand": "Det(R) - Det(A), iso-FPR 3% (descriptive)",
+  "estimate": 0.0,
+  "ci_low": -0.0057636887608069065,
+  "ci_high": 0.0057636887608070175,
+  "p_two_sided": 1.0
+ },
+ "outcome_conditions": {
+  "gate_fail": false,
+  "o1": false,
+  "o2": false,
+  "o3": true
+ },
+ "outcome": 3,
+ "outcome_label": "Outcome 3 - no meaningful added value",
+ "heldout_benign_fpr": [
+  {
+   "arm": "A",
+   "fpr": 0.01,
+   "heldout_fpr": 0.012988266619203319
+  },
+  {
+   "arm": "A",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03044090417163307
+  },
+  {
+   "arm": "H",
+   "fpr": 0.01,
+   "heldout_fpr": 0.013036720004450993
+  },
+  {
+   "arm": "H",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03302028338502439
+  },
+  {
+   "arm": "R",
+   "fpr": 0.01,
+   "heldout_fpr": 0.010208990946672403
+  },
+  {
+   "arm": "R",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03761891186424989
+  }
+ ],
+ "seconds": 41
+}

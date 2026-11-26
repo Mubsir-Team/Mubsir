@@ -1,0 +1,25 @@
+check,ok,detail
+verify_bundle.py (stdlib) passes,True,8/8 files OK
+model file unchanged since freeze,True,
+manifest unchanged since freeze,True,
+split / rules / dataset unchanged since freeze,True,
+scorer feature order = pipeline feature list (100),True,
+bundle scorer reproduces the frozen test risk exactly,True,max diff 0.0e+00
+levels follow the frozen operators,True,
+score_users: risk_peak = max daily risk per user,True,
+explain: base + all contributions = calibrated logit (risk reproduced),True,
+explain: one dict per row with top features,True,
+missing feature column raises ValueError,True,
+NaN outside channel_distribution_shift_* raises ValueError,True,
+NaN in channel_distribution_shift_* accepted,True,
+infinite value raises ValueError,True,
+"Stage A decision: lightgbm, y_10",True,
+Stage B tuning not adopted,True,
+no ablation adopted,True,
+pre-test audit all PASS before test,True,24 checks
+"manifest params = defaults, 237 trees",True,
+no test user in CV folds,True,
+dev/test schedule groups disjoint,True,
+no forbidden column among model features,True,
+final model trained on dev rows only,True,
+all stage reports present,True,[]

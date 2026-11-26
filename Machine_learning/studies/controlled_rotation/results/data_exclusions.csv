@@ -1,0 +1,139 @@
+host,cohort,reason
+SKF2105,H146,only 15 eligible workdays
+DOT1898,R253,only 30 eligible workdays
+FAJ3608,R253,only 28 eligible workdays
+REM0580,R253,only 30 eligible workdays
+ABH0349,S8,only 1 all-3-active days after day 30
+ACG3819,S8,only 0 all-3-active days after day 30
+ADG1737,S8,L=12 not possible: 10 all-3-active days
+AGW1590,S8,only 4 all-3-active days after day 30
+AIP1614,S8,only 5 all-3-active days after day 30
+AJH2110,S8,only 1 all-3-active days after day 30
+ALB3649,S8,only 2 all-3-active days after day 30
+ANF3332,S8,only 0 all-3-active days after day 30
+APB1122,S8,only 2 all-3-active days after day 30
+ARH2097,S8,only 3 all-3-active days after day 30
+ASW1918,S8,only 0 all-3-active days after day 30
+ATH0225,S8,only 2 all-3-active days after day 30
+ATM1615,S8,only 4 all-3-active days after day 30
+BAB1619,S8,only 4 all-3-active days after day 30
+BLB1876,S8,only 3 all-3-active days after day 30
+BMC3636,S8,only 0 all-3-active days after day 30
+BMS0925,S8,only 4 all-3-active days after day 30
+BNF1110,S8,only 2 all-3-active days after day 30
+BNH3516,S8,only 2 all-3-active days after day 30
+BYS3626,S8,only 2 all-3-active days after day 30
+CAR0992,S8,only 4 all-3-active days after day 30
+CBA1023,S8,only 1 all-3-active days after day 30
+CCF3529,S8,only 3 all-3-active days after day 30
+CCT2165,S8,only 2 all-3-active days after day 30
+CCW2381,S8,L=12 not possible: 11 all-3-active days
+CEC1352,S8,L=12 not possible: 11 all-3-active days
+CER0228,S8,L=12 not possible: 6 all-3-active days
+CID3640,S8,only 1 all-3-active days after day 30
+CIG3191,S8,only 2 all-3-active days after day 30
+CKB3645,S8,only 1 all-3-active days after day 30
+CMT0267,S8,only 4 all-3-active days after day 30
+CRP3682,S8,only 0 all-3-active days after day 30
+CSL0428,S8,only 5 all-3-active days after day 30
+CTH0737,S8,only 1 all-3-active days after day 30
+CTH2220,S8,only 0 all-3-active days after day 30
+DBF3582,S8,only 0 all-3-active days after day 30
+DEP0163,S8,L=12 not possible: 11 all-3-active days
+DJF3394,S8,only 0 all-3-active days after day 30
+DTL2891,S8,only 3 all-3-active days after day 30
+EGC0931,S8,only 0 all-3-active days after day 30
+EJH2799,S8,only 2 all-3-active days after day 30
+EMK3809,S8,only 2 all-3-active days after day 30
+ENM2269,S8,L=12 not possible: 6 all-3-active days
+ERH0815,S8,only 5 all-3-active days after day 30
+ESS3341,S8,only 1 all-3-active days after day 30
+EYD2871,S8,only 1 all-3-active days after day 30
+FAJ0523,S8,only 2 all-3-active days after day 30
+FAL1867,S8,L=12 not possible: 8 all-3-active days
+GAH0525,S8,only 3 all-3-active days after day 30
+GDH2500,S8,only 3 all-3-active days after day 30
+GEH3406,S8,only 3 all-3-active days after day 30
+GFB1385,S8,only 3 all-3-active days after day 30
+GLN2107,S8,only 4 all-3-active days after day 30
+HAG3196,S8,L=12 not possible: 11 all-3-active days
+HCS2231,S8,only 0 all-3-active days after day 30
+HDN2609,S8,only 2 all-3-active days after day 30
+HGJ2592,S8,L=12 not possible: 11 all-3-active days
+HHD2393,S8,only 0 all-3-active days after day 30
+HKK2716,S8,only 1 all-3-active days after day 30
+HNC0074,S8,L=12 not possible: 8 all-3-active days
+HQF1912,S8,only 2 all-3-active days after day 30
+HWP0364,S8,only 4 all-3-active days after day 30
+ILH2989,S8,only 3 all-3-active days after day 30
+ILY3152,S8,only 3 all-3-active days after day 30
+IMC3296,S8,only 3 all-3-active days after day 30
+IMH0562,S8,only 4 all-3-active days after day 30
+JEH2787,S8,only 0 all-3-active days after day 30
+JGR3914,S8,only 0 all-3-active days after day 30
+JKK1422,S8,only 1 all-3-active days after day 30
+JLR0313,S8,only 0 all-3-active days after day 30
+JMV0602,S8,only 1 all-3-active days after day 30
+KBM3460,S8,only 0 all-3-active days after day 30
+KCH3095,S8,only 0 all-3-active days after day 30
+KCM3235,S8,L=12 not possible: 6 all-3-active days
+KCW2117,S8,L=12 not possible: 6 all-3-active days
+KDW2929,S8,only 2 all-3-active days after day 30
+KLP0249,S8,L=12 not possible: 8 all-3-active days
+KWC3812,S8,only 1 all-3-active days after day 30
+LCP0344,S8,only 3 all-3-active days after day 30
+LDB3304,S8,only 1 all-3-active days after day 30
+LFR0075,S8,only 2 all-3-active days after day 30
+LMM3366,S8,L=12 not possible: 11 all-3-active days
+LUK1182,S8,L=12 not possible: 8 all-3-active days
+LXC0839,S8,only 0 all-3-active days after day 30
+MBH1370,S8,L=12 not possible: 7 all-3-active days
+MCB2802,S8,only 0 all-3-active days after day 30
+MCW0674,S8,only 2 all-3-active days after day 30
+MEB2241,S8,only 0 all-3-active days after day 30
+MET1881,S8,only 2 all-3-active days after day 30
+MRL2636,S8,only 3 all-3-active days after day 30
+MVS1908,S8,only 3 all-3-active days after day 30
+NCR2854,S8,only 0 all-3-active days after day 30
+NDC0948,S8,only 3 all-3-active days after day 30
+NDW3217,S8,only 1 all-3-active days after day 30
+NRG1562,S8,only 0 all-3-active days after day 30
+NRT1320,S8,only 1 all-3-active days after day 30
+NVH3726,S8,L=12 not possible: 7 all-3-active days
+NVL2180,S8,only 0 all-3-active days after day 30
+OEJ1648,S8,only 5 all-3-active days after day 30
+OKH3777,S8,only 4 all-3-active days after day 30
+PHB0124,S8,only 4 all-3-active days after day 30
+PHH1524,S8,only 1 all-3-active days after day 30
+PPP1295,S8,L=12 not possible: 6 all-3-active days
+QBR2250,S8,only 0 all-3-active days after day 30
+QKO2718,S8,L=12 not possible: 6 all-3-active days
+REF3266,S8,only 1 all-3-active days after day 30
+RLB1334,S8,only 2 all-3-active days after day 30
+RTN3680,S8,only 1 all-3-active days after day 30
+RVB0303,S8,only 2 all-3-active days after day 30
+SAM3855,S8,L=12 not possible: 6 all-3-active days
+SCE1877,S8,only 2 all-3-active days after day 30
+SCL2577,S8,only 2 all-3-active days after day 30
+SKF2105,S8,only 0 all-3-active days after day 30
+TAC3330,S8,only 1 all-3-active days after day 30
+TAP0664,S8,only 2 all-3-active days after day 30
+TCG0016,S8,only 4 all-3-active days after day 30
+TDJ3138,S8,only 0 all-3-active days after day 30
+TFH0544,S8,L=12 not possible: 7 all-3-active days
+TKE3293,S8,only 0 all-3-active days after day 30
+TMC3659,S8,only 1 all-3-active days after day 30
+TNR0319,S8,L=12 not possible: 6 all-3-active days
+TVC2918,S8,only 1 all-3-active days after day 30
+VAB1526,S8,only 0 all-3-active days after day 30
+VKM2949,S8,only 3 all-3-active days after day 30
+VNG0916,S8,only 2 all-3-active days after day 30
+VPS3185,S8,L=12 not possible: 10 all-3-active days
+WAH2778,S8,only 2 all-3-active days after day 30
+WBH1861,S8,only 0 all-3-active days after day 30
+WRF3534,S8,L=12 not possible: 6 all-3-active days
+WRJ2184,S8,only 0 all-3-active days after day 30
+XSF3982,S8,only 1 all-3-active days after day 30
+XTB2372,S8,only 2 all-3-active days after day 30
+YLL0795,S8,only 0 all-3-active days after day 30
+YNW2855,S8,only 2 all-3-active days after day 30

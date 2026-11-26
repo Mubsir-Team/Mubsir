@@ -1,0 +1,17 @@
+check,value
+"Recomputed (explicit loop) vs source column, max abs diff",2.842170943040401e-14
+"Model dataset column vs source column, max abs diff",0.0
+Baseline P50/P95 constant within every user,True
+Baseline P50/P95 identical before and after injection,True
+"Pre-injection file aligned with injected file (user, day)",True
+Truncation test: values changed when future rows removed (60 users),0
+Rows where injection changed the feature,13913
+  ...of which have NO injected day in the trailing 10 rows,0
+Rows before the attacker's first injected day with any change,0
+Benign-user rows with any change,0
+Max |delta - trailing sum of daily dE| (delta explained by injected days only),2.842170943040401e-14
+Days where daily E changed but no injection (y=0),0
+"AUC vs y_10 on dev rows, injected feature",0.9435642062046374
+"AUC vs y_10 on dev rows, pre-injection counterfactual (same rows/labels)",0.6009250384904815
+"AUC vs y_10, attackers' rows only, injected",0.9233722785934027
+"AUC vs y_10, attackers' rows only, counterfactual",0.5000311660135549

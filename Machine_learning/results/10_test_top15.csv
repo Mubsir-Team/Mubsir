@@ -1,0 +1,16 @@
+,mean_abs_shap,share,family,direction
+cumulative_deviation_10wd,1.1048428087691484,0.18122385139309613,Accumulation & shift (all channels),higher -> more risk
+cumulative_deviation_20wd,0.47356109119634665,0.07767671938067613,Accumulation & shift (all channels),higher -> more risk
+email_event_count,0.4489426209893514,0.07363863002451862,Email,higher -> more risk
+http_event_count,0.3499785486294514,0.057405868042217936,HTTP / web,higher -> more risk
+usb_active_days_20wd,0.19060401573172378,0.031264170384902826,USB / file,higher -> less risk
+email_active_days_20wd,0.1770115585299002,0.029034642867993416,Email,higher -> less risk
+external_email_count_20wd,0.17414724802209944,0.028564819126833667,Email,higher -> more risk
+consecutive_elevated_days_20wd,0.171737281666229,0.028169520011636293,Accumulation & shift (all channels),higher -> more risk
+multi_channel_days_10wd,0.15407635327254812,0.025272654107022997,"Rotation/multi-channel: team (switches, multi-channel days)",higher -> less risk
+cumulative_deviation_5wd,0.1397084228241123,0.022915928180269256,Accumulation & shift (all channels),higher -> more risk
+email_active_days_10wd,0.12577954797287366,0.02063121914647825,Email,higher -> less risk
+www_visit_count,0.11695875811159119,0.0191843730446589,HTTP / web,higher -> more risk
+combined_channel_intensity_30wd,0.10597846293454766,0.01738331015532923,Accumulation & shift (all channels),higher -> more risk
+external_email_count_10wd,0.09085893211278237,0.014903301610195601,Email,higher -> more risk
+nr_handoff_10wd,0.08605847176070586,0.014115897369014595,Rotation: deviation-based (nr_*),higher -> more risk

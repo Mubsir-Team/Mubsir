@@ -1,0 +1,141 @@
+{
+ "min_linked_pairs": 20,
+ "dev_users": 859,
+ "dev_attackers": 348,
+ "eligible_users": 714,
+ "eligible_attackers": 347,
+ "eligible_benign": 367,
+ "eligible_by_channel_set": {
+  "EH": {
+   "size": 240,
+   "sum": 187
+  },
+  "EU": {
+   "size": 368,
+   "sum": 305
+  },
+  "EUH": {
+   "size": 251,
+   "sum": 222
+  }
+ },
+ "eligible_attackers_by_switching_level": {
+  "High": {
+   "size": 115,
+   "sum": 114
+  },
+  "Low": {
+   "size": 117,
+   "sum": 117
+  },
+  "Medium": {
+   "size": 116,
+   "sum": 116
+  }
+ },
+ "eligible_attackers_by_channel_count": {
+  "2.0": {
+   "size": 229,
+   "sum": 228
+  },
+  "3.0": {
+   "size": 119,
+   "sum": 119
+  }
+ },
+ "baseline_channels": {
+  "2": 606,
+  "3": 253
+ },
+ "habit_rate_eligible": {
+  "p10": 0.22489823609226595,
+  "tertiles": [
+   0.38685239491691104,
+   0.5
+  ],
+  "p90": 0.6056162536612582,
+  "median_benign": 0.42857142857142855,
+  "median_attacker": 0.46551724137931033
+ },
+ "shortcut_auc_rate_folded": 0.5864788887231152,
+ "linked_pairs_median": {
+  "benign": 52.0,
+  "attacker": 69.0
+ },
+ "closed_study_hosts": {
+  "H146": {
+   "hosts": 145,
+   "eligible_hosts": 123
+  },
+  "R253": {
+   "hosts": 104,
+   "eligible_hosts": 97
+  },
+  "S8": {
+   "hosts": 36,
+   "eligible_hosts": 36
+  }
+ },
+ "closed_study_cases": [
+  {
+   "cohort": "H146",
+   "variant": "BLK",
+   "cases": 290,
+   "eligible_cases": 246
+  },
+  {
+   "cohort": "H146",
+   "variant": "FIX-EMAIL",
+   "cases": 290,
+   "eligible_cases": 246
+  },
+  {
+   "cohort": "H146",
+   "variant": "FIX-HTTP",
+   "cases": 290,
+   "eligible_cases": 246
+  },
+  {
+   "cohort": "H146",
+   "variant": "FIX-USB",
+   "cases": 290,
+   "eligible_cases": 246
+  },
+  {
+   "cohort": "H146",
+   "variant": "ROT",
+   "cases": 290,
+   "eligible_cases": 246
+  },
+  {
+   "cohort": "H146",
+   "variant": "SIM",
+   "cases": 290,
+   "eligible_cases": 246
+  },
+  {
+   "cohort": "R253",
+   "variant": "BLK",
+   "cases": 208,
+   "eligible_cases": 194
+  },
+  {
+   "cohort": "R253",
+   "variant": "ROT",
+   "cases": 208,
+   "eligible_cases": 194
+  },
+  {
+   "cohort": "S8",
+   "variant": "BLK",
+   "cases": 48,
+   "eligible_cases": 48
+  },
+  {
+   "cohort": "S8",
+   "variant": "ROT",
+   "cases": 48,
+   "eligible_cases": 48
+  }
+ ]
+}

@@ -1,12 +1,21 @@
-__pycache__/
-*.pyc
-.pytest_cache/
+# Python
 .venv/
-catboost_info/
-.DS_Store
-# training data (see pipeline/data/README.md): kept out of git; SHA256SUMS.txt and README.md stay tracked
-pipeline/data/Clear_Attack_Simulation/
-pipeline/data/work/
+__pycache__/
+*.py[cod]
 
-# keep the evidence logs (the repository root .gitignore ignores *.log)
-!pipeline/results/*.log
+# Kept locally, not part of the MUBSIR Model v2 repository:
+# archive/       superseded handover docs, images, large CSV export (nothing reads them)
+# mubsir_system/ production system, still being built (separate next step)
+# deliverables/  database package for the team (belongs to the mubsir_system step)
+archive/
+mubsir_system/
+deliverables/
+
+# Keep run logs as evidence (the repository root .gitignore ignores *.log)
+!*.log
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

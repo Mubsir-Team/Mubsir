@@ -1,0 +1,28 @@
+[PASS] G3 pipeline/common.py identical to hashes_before.json  
+[PASS] G3 pipeline/models.py identical to hashes_before.json  
+[PASS] G3 pipeline/metrics.py identical to hashes_before.json  
+[PASS] G3 pipeline/05_tune.py identical to hashes_before.json  
+[PASS] G3 config/cv_folds.csv identical to hashes_before.json  
+[PASS] G3 config/selection_rules.json identical to hashes_before.json  
+[PASS] G3 data/model_dataset_995.parquet identical to hashes_before.json  
+[PASS] G3 work/labels.parquet identical to hashes_before.json  
+[PASS] G3 study_controlled_rotation/data/counterfactual_cases.parquet identical to hashes_before.json  
+r0 k0 done 30s
+r0 k1 done 53s
+r0 k2 done 84s
+r0 k3 done 121s
+r0 k4 done 151s
+r1 k0 done 160s
+r1 k1 done 170s
+r1 k2 done 181s
+r1 k3 done 190s
+r1 k4 done 198s
+r2 k0 done 208s
+r2 k1 done 218s
+r2 k2 done 230s
+r2 k3 done 238s
+r2 k4 done 246s
+[PASS] G1 A0 OOF == Stage A OOF exactly (3 repeats)  max |diff| 0.00e+00
+[PASS] G2 switching SHAP share A0 < W2 < W5 < W10  W0 0.0000 | A0 0.0578 | W2 0.1937 | W5 0.3150 | W10 0.3795
+[PASS] G2 share(W10) >= 2 x share(A0)  ratio 6.57
+GATES: proceed | 247 s

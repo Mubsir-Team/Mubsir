@@ -1,0 +1,13 @@
+variant,L,habit_tertile,E_switch,share_above_p95,hosts
+BLK,6,low,2.0,0.776,49
+BLK,6,mid,1.227,0.458,48
+BLK,6,high,1.223,0.479,48
+BLK,12,low,1.876,0.714,49
+BLK,12,mid,1.061,0.271,48
+BLK,12,high,1.018,0.312,48
+ROT,6,low,3.912,1.0,49
+ROT,6,mid,2.374,0.958,48
+ROT,6,high,2.157,0.875,48
+ROT,12,low,6.207,1.0,49
+ROT,12,mid,3.578,1.0,48
+ROT,12,high,3.113,1.0,48

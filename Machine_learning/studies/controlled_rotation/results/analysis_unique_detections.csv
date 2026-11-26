@@ -1,0 +1,5 @@
+fpr,variant,cases,D_not_Cplus,Cplus_not_D
+0.03,ROT,290,0,5
+0.03,BLK,290,2,2
+0.01,ROT,290,3,8
+0.01,BLK,290,7,5

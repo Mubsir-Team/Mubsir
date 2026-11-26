@@ -1,0 +1,21 @@
+{
+  "adopted": false,
+  "conditions": {
+    "tuned primary >= default primary + 0.005": false,
+    "tuned row_pr_auc (15-fold mean) >= default row_pr_auc - 0.002": true,
+    "tuned frozen_inner_user_recall_1pct >= default frozen_inner_user_recall_1pct": true
+  },
+  "default": {
+    "primary": 0.8208529045257796,
+    "row_pr_auc": 0.943902489896539,
+    "user_recall": 0.8553639846743296,
+    "fp_users_per_repeat": 4.333333333333333
+  },
+  "tuned": {
+    "primary": 0.8184528110068064,
+    "row_pr_auc": 0.9436903251946785,
+    "user_recall": 0.8639846743295019,
+    "fp_users_per_repeat": 5.333333333333333
+  },
+  "rules_sha": "41de4354e861fb08f2018d76ee1d35fe45cbd3b3b4af3a37a96fba70fdf5deb0"
+}

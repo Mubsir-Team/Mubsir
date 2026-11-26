@@ -1,0 +1,10 @@
+check,value
+"y_h(t)=1 without an attack day in [t-h+1, t], or vice versa (all h)",0
+Rows with y_10=1 before the attacker's first injected day,0
+Rows where a forward-looking 10-day label would differ from y_10,6380
+Off-day rows,1670
+Off-days with an earlier attack day in the same window,1605
+Off-days before the first attack day (leading off-days),65
+Max workdays from last attack day to an off-day,4.0
+Off-days positive under y_5 / y_10 / y_20,1605 / 1605 / 1605
+Rows with wd_from_first_attack == 0 that are injected days,"400 rows, all y=1: True"

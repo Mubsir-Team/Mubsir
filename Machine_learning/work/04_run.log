@@ -1,0 +1,278 @@
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=0 fold=0 PR-AUC=0.9413 R@1%=0.8769 trees=181 1.7s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=0 fold=1 PR-AUC=0.9465 R@1%=0.8861 trees=328 3.0s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=0 fold=2 PR-AUC=0.9506 R@1%=0.9090 trees=290 2.6s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=0 fold=3 PR-AUC=0.9411 R@1%=0.8736 trees=241 2.1s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=0 fold=4 PR-AUC=0.9453 R@1%=0.8723 trees=336 2.7s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=1 fold=0 PR-AUC=0.9454 R@1%=0.8872 trees=249 2.3s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=1 fold=1 PR-AUC=0.9465 R@1%=0.8838 trees=246 2.4s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=1 fold=2 PR-AUC=0.9543 R@1%=0.8889 trees=291 2.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=1 fold=3 PR-AUC=0.9477 R@1%=0.8770 trees=246 2.4s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=1 fold=4 PR-AUC=0.9513 R@1%=0.8961 trees=247 2.5s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=2 fold=0 PR-AUC=0.9458 R@1%=0.8885 trees=239 1.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=2 fold=1 PR-AUC=0.9457 R@1%=0.8969 trees=273 2.0s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=2 fold=2 PR-AUC=0.9554 R@1%=0.9033 trees=510 3.4s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=2 fold=3 PR-AUC=0.9461 R@1%=0.8646 trees=242 1.9s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h= 5 rep=2 fold=4 PR-AUC=0.9528 R@1%=0.8818 trees=216 1.7s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=0 fold=0 PR-AUC=0.9403 R@1%=0.8466 trees=245 1.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=0 fold=1 PR-AUC=0.9378 R@1%=0.8501 trees=166 1.3s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=0 fold=2 PR-AUC=0.9465 R@1%=0.8907 trees=198 1.6s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=0 fold=3 PR-AUC=0.9406 R@1%=0.8621 trees=240 1.9s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=0 fold=4 PR-AUC=0.9429 R@1%=0.8536 trees=210 1.7s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=1 fold=0 PR-AUC=0.9412 R@1%=0.8698 trees=257 2.0s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=1 fold=1 PR-AUC=0.9395 R@1%=0.8657 trees=232 1.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=1 fold=2 PR-AUC=0.9507 R@1%=0.8721 trees=436 2.9s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=1 fold=3 PR-AUC=0.9474 R@1%=0.8520 trees=238 1.7s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=1 fold=4 PR-AUC=0.9471 R@1%=0.8649 trees=173 1.4s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=2 fold=0 PR-AUC=0.9379 R@1%=0.8569 trees=196 1.5s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=2 fold=1 PR-AUC=0.9419 R@1%=0.8723 trees=243 1.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=2 fold=2 PR-AUC=0.9506 R@1%=0.8863 trees=331 2.2s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=2 fold=3 PR-AUC=0.9433 R@1%=0.8374 trees=174 1.3s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=10 rep=2 fold=4 PR-AUC=0.9507 R@1%=0.8651 trees=221 1.6s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=0 fold=0 PR-AUC=0.9142 R@1%=0.7894 trees=70 0.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=0 fold=1 PR-AUC=0.9352 R@1%=0.8257 trees=199 1.5s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=0 fold=2 PR-AUC=0.9443 R@1%=0.8722 trees=202 1.6s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=0 fold=3 PR-AUC=0.9373 R@1%=0.8202 trees=232 1.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=0 fold=4 PR-AUC=0.9401 R@1%=0.8151 trees=220 1.8s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=1 fold=0 PR-AUC=0.9316 R@1%=0.8306 trees=260 2.0s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=1 fold=1 PR-AUC=0.9356 R@1%=0.8243 trees=291 2.2s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=1 fold=2 PR-AUC=0.9400 R@1%=0.8309 trees=178 1.5s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=1 fold=3 PR-AUC=0.9500 R@1%=0.8541 trees=254 1.9s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=1 fold=4 PR-AUC=0.9436 R@1%=0.8420 trees=184 1.5s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=2 fold=0 PR-AUC=0.9314 R@1%=0.8097 trees=163 1.4s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=2 fold=1 PR-AUC=0.9331 R@1%=0.8244 trees=215 1.7s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=2 fold=2 PR-AUC=0.9436 R@1%=0.8615 trees=299 2.1s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=2 fold=3 PR-AUC=0.9371 R@1%=0.8102 trees=178 1.3s
+C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\.venv\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm       h=20 rep=2 fold=4 PR-AUC=0.9462 R@1%=0.8443 trees=101 0.9s
+xgboost        h= 5 rep=0 fold=0 PR-AUC=0.9416 R@1%=0.8759 trees=271 4.6s
+xgboost        h= 5 rep=0 fold=1 PR-AUC=0.9396 R@1%=0.8678 trees=283 4.9s
+xgboost        h= 5 rep=0 fold=2 PR-AUC=0.9494 R@1%=0.9039 trees=292 5.9s
+xgboost        h= 5 rep=0 fold=3 PR-AUC=0.9393 R@1%=0.8694 trees=240 4.6s
+xgboost        h= 5 rep=0 fold=4 PR-AUC=0.9444 R@1%=0.8699 trees=474 8.0s
+xgboost        h= 5 rep=1 fold=0 PR-AUC=0.9437 R@1%=0.8857 trees=245 4.2s
+xgboost        h= 5 rep=1 fold=1 PR-AUC=0.9466 R@1%=0.8881 trees=369 6.0s
+xgboost        h= 5 rep=1 fold=2 PR-AUC=0.9548 R@1%=0.8871 trees=509 8.3s
+xgboost        h= 5 rep=1 fold=3 PR-AUC=0.9477 R@1%=0.8784 trees=370 6.4s
+xgboost        h= 5 rep=1 fold=4 PR-AUC=0.9503 R@1%=0.8947 trees=220 4.2s
+xgboost        h= 5 rep=2 fold=0 PR-AUC=0.9471 R@1%=0.8850 trees=394 6.2s
+xgboost        h= 5 rep=2 fold=1 PR-AUC=0.9446 R@1%=0.8931 trees=342 5.6s
+xgboost        h= 5 rep=2 fold=2 PR-AUC=0.9530 R@1%=0.9070 trees=430 7.2s
+xgboost        h= 5 rep=2 fold=3 PR-AUC=0.9445 R@1%=0.8609 trees=253 5.0s
+xgboost        h= 5 rep=2 fold=4 PR-AUC=0.9491 R@1%=0.8772 trees=195 3.7s
+xgboost        h=10 rep=0 fold=0 PR-AUC=0.9411 R@1%=0.8530 trees=303 5.1s
+xgboost        h=10 rep=0 fold=1 PR-AUC=0.9369 R@1%=0.8501 trees=179 3.3s
+xgboost        h=10 rep=0 fold=2 PR-AUC=0.9458 R@1%=0.8951 trees=249 4.3s
+xgboost        h=10 rep=0 fold=3 PR-AUC=0.9405 R@1%=0.8613 trees=380 6.3s
+xgboost        h=10 rep=0 fold=4 PR-AUC=0.9415 R@1%=0.8532 trees=275 5.1s
+xgboost        h=10 rep=1 fold=0 PR-AUC=0.9404 R@1%=0.8664 trees=308 5.6s
+xgboost        h=10 rep=1 fold=1 PR-AUC=0.9408 R@1%=0.8699 trees=405 6.6s
+xgboost        h=10 rep=1 fold=2 PR-AUC=0.9491 R@1%=0.8628 trees=341 5.6s
+xgboost        h=10 rep=1 fold=3 PR-AUC=0.9446 R@1%=0.8467 trees=216 4.1s
+xgboost        h=10 rep=1 fold=4 PR-AUC=0.9440 R@1%=0.8620 trees=141 3.1s
+xgboost        h=10 rep=2 fold=0 PR-AUC=0.9377 R@1%=0.8599 trees=275 7.3s
+xgboost        h=10 rep=2 fold=1 PR-AUC=0.9397 R@1%=0.8753 trees=258 6.8s
+xgboost        h=10 rep=2 fold=2 PR-AUC=0.9504 R@1%=0.8846 trees=344 7.1s
+xgboost        h=10 rep=2 fold=3 PR-AUC=0.9407 R@1%=0.8330 trees=200 4.9s
+xgboost        h=10 rep=2 fold=4 PR-AUC=0.9483 R@1%=0.8586 trees=207 5.1s
+xgboost        h=20 rep=0 fold=0 PR-AUC=0.9314 R@1%=0.8015 trees=251 5.9s
+xgboost        h=20 rep=0 fold=1 PR-AUC=0.9359 R@1%=0.8213 trees=224 5.1s
+xgboost        h=20 rep=0 fold=2 PR-AUC=0.9405 R@1%=0.8582 trees=188 4.4s
+xgboost        h=20 rep=0 fold=3 PR-AUC=0.9384 R@1%=0.8163 trees=213 4.9s
+xgboost        h=20 rep=0 fold=4 PR-AUC=0.9382 R@1%=0.8107 trees=324 6.5s
+xgboost        h=20 rep=1 fold=0 PR-AUC=0.9306 R@1%=0.8227 trees=247 5.2s
+xgboost        h=20 rep=1 fold=1 PR-AUC=0.9343 R@1%=0.8250 trees=242 5.2s
+xgboost        h=20 rep=1 fold=2 PR-AUC=0.9365 R@1%=0.8253 trees=180 4.2s
+xgboost        h=20 rep=1 fold=3 PR-AUC=0.9498 R@1%=0.8604 trees=293 6.1s
+xgboost        h=20 rep=1 fold=4 PR-AUC=0.9403 R@1%=0.8259 trees=145 3.3s
+xgboost        h=20 rep=2 fold=0 PR-AUC=0.9301 R@1%=0.8142 trees=202 4.5s
+xgboost        h=20 rep=2 fold=1 PR-AUC=0.9331 R@1%=0.8255 trees=313 6.7s
+xgboost        h=20 rep=2 fold=2 PR-AUC=0.9418 R@1%=0.8470 trees=242 5.5s
+xgboost        h=20 rep=2 fold=3 PR-AUC=0.9359 R@1%=0.8108 trees=201 4.9s
+xgboost        h=20 rep=2 fold=4 PR-AUC=0.9445 R@1%=0.8433 trees=126 3.3s
+random_forest  h= 5 rep=0 fold=0 PR-AUC=0.8962 R@1%=0.7999 trees=None 4.1s
+random_forest  h= 5 rep=0 fold=1 PR-AUC=0.9014 R@1%=0.7904 trees=None 3.6s
+random_forest  h= 5 rep=0 fold=2 PR-AUC=0.9083 R@1%=0.8427 trees=None 4.0s
+random_forest  h= 5 rep=0 fold=3 PR-AUC=0.9050 R@1%=0.8018 trees=None 3.8s
+random_forest  h= 5 rep=0 fold=4 PR-AUC=0.9181 R@1%=0.8356 trees=None 3.8s
+random_forest  h= 5 rep=1 fold=0 PR-AUC=0.9015 R@1%=0.8177 trees=None 3.7s
+random_forest  h= 5 rep=1 fold=1 PR-AUC=0.9046 R@1%=0.8163 trees=None 4.0s
+random_forest  h= 5 rep=1 fold=2 PR-AUC=0.9065 R@1%=0.8028 trees=None 4.0s
+random_forest  h= 5 rep=1 fold=3 PR-AUC=0.9078 R@1%=0.8204 trees=None 3.6s
+random_forest  h= 5 rep=1 fold=4 PR-AUC=0.9123 R@1%=0.8295 trees=None 3.6s
+random_forest  h= 5 rep=2 fold=0 PR-AUC=0.8818 R@1%=0.7830 trees=None 3.8s
+random_forest  h= 5 rep=2 fold=1 PR-AUC=0.9065 R@1%=0.8358 trees=None 4.0s
+random_forest  h= 5 rep=2 fold=2 PR-AUC=0.9114 R@1%=0.8364 trees=None 3.8s
+random_forest  h= 5 rep=2 fold=3 PR-AUC=0.9125 R@1%=0.8084 trees=None 3.8s
+random_forest  h= 5 rep=2 fold=4 PR-AUC=0.9169 R@1%=0.8262 trees=None 4.0s
+random_forest  h=10 rep=0 fold=0 PR-AUC=0.9000 R@1%=0.7879 trees=None 4.1s
+random_forest  h=10 rep=0 fold=1 PR-AUC=0.9064 R@1%=0.7825 trees=None 4.0s
+random_forest  h=10 rep=0 fold=2 PR-AUC=0.9125 R@1%=0.8360 trees=None 4.1s
+random_forest  h=10 rep=0 fold=3 PR-AUC=0.9160 R@1%=0.8063 trees=None 3.9s
+random_forest  h=10 rep=0 fold=4 PR-AUC=0.9181 R@1%=0.8223 trees=None 3.9s
+random_forest  h=10 rep=1 fold=0 PR-AUC=0.8988 R@1%=0.7801 trees=None 3.9s
+random_forest  h=10 rep=1 fold=1 PR-AUC=0.9073 R@1%=0.8102 trees=None 4.0s
+random_forest  h=10 rep=1 fold=2 PR-AUC=0.9087 R@1%=0.8003 trees=None 4.1s
+random_forest  h=10 rep=1 fold=3 PR-AUC=0.9194 R@1%=0.8253 trees=None 4.1s
+random_forest  h=10 rep=1 fold=4 PR-AUC=0.9168 R@1%=0.8259 trees=None 4.0s
+random_forest  h=10 rep=2 fold=0 PR-AUC=0.8814 R@1%=0.7587 trees=None 4.0s
+random_forest  h=10 rep=2 fold=1 PR-AUC=0.9116 R@1%=0.8235 trees=None 3.5s
+random_forest  h=10 rep=2 fold=2 PR-AUC=0.9143 R@1%=0.8245 trees=None 3.4s
+random_forest  h=10 rep=2 fold=3 PR-AUC=0.9168 R@1%=0.7912 trees=None 3.3s
+random_forest  h=10 rep=2 fold=4 PR-AUC=0.9215 R@1%=0.8323 trees=None 3.5s
+random_forest  h=20 rep=0 fold=0 PR-AUC=0.8999 R@1%=0.7410 trees=None 3.4s
+random_forest  h=20 rep=0 fold=1 PR-AUC=0.9119 R@1%=0.7602 trees=None 3.4s
+random_forest  h=20 rep=0 fold=2 PR-AUC=0.9195 R@1%=0.8222 trees=None 3.3s
+random_forest  h=20 rep=0 fold=3 PR-AUC=0.9226 R@1%=0.7929 trees=None 3.3s
+random_forest  h=20 rep=0 fold=4 PR-AUC=0.9183 R@1%=0.8001 trees=None 3.2s
+random_forest  h=20 rep=1 fold=0 PR-AUC=0.9010 R@1%=0.7369 trees=None 3.3s
+random_forest  h=20 rep=1 fold=1 PR-AUC=0.9088 R@1%=0.7761 trees=None 3.3s
+random_forest  h=20 rep=1 fold=2 PR-AUC=0.9129 R@1%=0.7830 trees=None 3.2s
+random_forest  h=20 rep=1 fold=3 PR-AUC=0.9330 R@1%=0.8323 trees=None 3.2s
+random_forest  h=20 rep=1 fold=4 PR-AUC=0.9172 R@1%=0.8052 trees=None 3.3s
+random_forest  h=20 rep=2 fold=0 PR-AUC=0.8896 R@1%=0.7250 trees=None 3.3s
+random_forest  h=20 rep=2 fold=1 PR-AUC=0.9164 R@1%=0.7785 trees=None 3.2s
+random_forest  h=20 rep=2 fold=2 PR-AUC=0.9173 R@1%=0.8120 trees=None 3.3s
+random_forest  h=20 rep=2 fold=3 PR-AUC=0.9205 R@1%=0.7843 trees=None 3.4s
+random_forest  h=20 rep=2 fold=4 PR-AUC=0.9271 R@1%=0.8273 trees=None 3.3s
+catboost       h= 5 rep=0 fold=0 PR-AUC=0.9409 R@1%=0.8664 trees=217 5.2s
+catboost       h= 5 rep=0 fold=1 PR-AUC=0.9463 R@1%=0.8861 trees=231 4.7s
+catboost       h= 5 rep=0 fold=2 PR-AUC=0.9508 R@1%=0.9049 trees=197 4.2s
+catboost       h= 5 rep=0 fold=3 PR-AUC=0.9413 R@1%=0.8741 trees=232 4.8s
+catboost       h= 5 rep=0 fold=4 PR-AUC=0.9490 R@1%=0.8783 trees=444 8.4s
+catboost       h= 5 rep=1 fold=0 PR-AUC=0.9471 R@1%=0.8828 trees=244 4.8s
+catboost       h= 5 rep=1 fold=1 PR-AUC=0.9493 R@1%=0.8939 trees=454 8.9s
+catboost       h= 5 rep=1 fold=2 PR-AUC=0.9526 R@1%=0.8889 trees=307 6.5s
+catboost       h= 5 rep=1 fold=3 PR-AUC=0.9464 R@1%=0.8780 trees=198 4.1s
+catboost       h= 5 rep=1 fold=4 PR-AUC=0.9527 R@1%=0.9022 trees=292 5.8s
+catboost       h= 5 rep=2 fold=0 PR-AUC=0.9456 R@1%=0.8976 trees=336 6.5s
+catboost       h= 5 rep=2 fold=1 PR-AUC=0.9483 R@1%=0.8926 trees=386 7.7s
+catboost       h= 5 rep=2 fold=2 PR-AUC=0.9504 R@1%=0.9051 trees=239 5.2s
+catboost       h= 5 rep=2 fold=3 PR-AUC=0.9466 R@1%=0.8701 trees=278 5.5s
+catboost       h= 5 rep=2 fold=4 PR-AUC=0.9515 R@1%=0.8804 trees=270 5.1s
+catboost       h=10 rep=0 fold=0 PR-AUC=0.9350 R@1%=0.8522 trees=151 3.3s
+catboost       h=10 rep=0 fold=1 PR-AUC=0.9417 R@1%=0.8622 trees=250 5.0s
+catboost       h=10 rep=0 fold=2 PR-AUC=0.9481 R@1%=0.8955 trees=296 6.0s
+catboost       h=10 rep=0 fold=3 PR-AUC=0.9397 R@1%=0.8686 trees=324 6.6s
+catboost       h=10 rep=0 fold=4 PR-AUC=0.9423 R@1%=0.8585 trees=363 7.0s
+catboost       h=10 rep=1 fold=0 PR-AUC=0.9425 R@1%=0.8732 trees=406 7.6s
+catboost       h=10 rep=1 fold=1 PR-AUC=0.9434 R@1%=0.8699 trees=233 4.8s
+catboost       h=10 rep=1 fold=2 PR-AUC=0.9464 R@1%=0.8681 trees=288 5.9s
+catboost       h=10 rep=1 fold=3 PR-AUC=0.9505 R@1%=0.8665 trees=266 5.4s
+catboost       h=10 rep=1 fold=4 PR-AUC=0.9471 R@1%=0.8809 trees=203 4.2s
+catboost       h=10 rep=2 fold=0 PR-AUC=0.9380 R@1%=0.8665 trees=210 4.0s
+catboost       h=10 rep=2 fold=1 PR-AUC=0.9419 R@1%=0.8773 trees=423 8.1s
+catboost       h=10 rep=2 fold=2 PR-AUC=0.9496 R@1%=0.8952 trees=484 9.5s
+catboost       h=10 rep=2 fold=3 PR-AUC=0.9462 R@1%=0.8579 trees=404 7.8s
+catboost       h=10 rep=2 fold=4 PR-AUC=0.9514 R@1%=0.8696 trees=407 7.6s
+catboost       h=20 rep=0 fold=0 PR-AUC=0.9313 R@1%=0.8088 trees=243 4.9s
+catboost       h=20 rep=0 fold=1 PR-AUC=0.9318 R@1%=0.8129 trees=184 3.9s
+catboost       h=20 rep=0 fold=2 PR-AUC=0.9394 R@1%=0.8552 trees=174 3.9s
+catboost       h=20 rep=0 fold=3 PR-AUC=0.9391 R@1%=0.8324 trees=202 4.4s
+catboost       h=20 rep=0 fold=4 PR-AUC=0.9382 R@1%=0.8218 trees=400 7.7s
+catboost       h=20 rep=1 fold=0 PR-AUC=0.9336 R@1%=0.8313 trees=292 5.5s
+catboost       h=20 rep=1 fold=1 PR-AUC=0.9372 R@1%=0.8351 trees=214 4.4s
+catboost       h=20 rep=1 fold=2 PR-AUC=0.9400 R@1%=0.8355 trees=214 5.4s
+catboost       h=20 rep=1 fold=3 PR-AUC=0.9484 R@1%=0.8452 trees=143 3.5s
+catboost       h=20 rep=1 fold=4 PR-AUC=0.9386 R@1%=0.8356 trees=136 3.4s
+catboost       h=20 rep=2 fold=0 PR-AUC=0.9340 R@1%=0.8215 trees=318 6.7s
+catboost       h=20 rep=2 fold=1 PR-AUC=0.9316 R@1%=0.8319 trees=337 6.8s
+catboost       h=20 rep=2 fold=2 PR-AUC=0.9396 R@1%=0.8536 trees=193 4.6s
+catboost       h=20 rep=2 fold=3 PR-AUC=0.9369 R@1%=0.8128 trees=228 5.0s
+catboost       h=20 rep=2 fold=4 PR-AUC=0.9464 R@1%=0.8493 trees=201 4.6s
+Traceback (most recent call last):
+  File "C:\Users\reef1\Desktop\Grad-Project\New-Dataset\Mubsir-remas-mushabbab-attacks-generator\Model\pipeline\04_cv_compare.py", line 178, in <module>
+    print(report)
+    ~~~~~^^^^^^^^
+  File "C:\Users\reef1\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 3457: character maps to <undefined>

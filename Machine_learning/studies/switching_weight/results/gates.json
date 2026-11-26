@@ -1,0 +1,97 @@
+{
+ "preregistration_sha256": "6809b403cd0a15557b61f0f2c9b38627b30f1a971b7ba5bdaba968a10eea5dd6",
+ "g1_passed": true,
+ "g2_passed": true,
+ "g3_passed": true,
+ "switching_shap_share": {
+  "A0": 0.05779335874962161,
+  "W2": 0.1937276851760609,
+  "W5": 0.31497291364713365,
+  "W10": 0.37947485862179414,
+  "W0": 0.0
+ },
+ "switching_split_share": {
+  "A0": 0.08301498127340824,
+  "SW-only": 1.0,
+  "W0": 0.0,
+  "W10": 0.8673078324225865,
+  "W2": 0.3353976001627008,
+  "W5": 0.7357257509745472
+ },
+ "consequence": "proceed",
+ "checks": [
+  {
+   "gate": "G3",
+   "check": "pipeline/common.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/models.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/metrics.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "pipeline/05_tune.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "config/cv_folds.csv identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "config/selection_rules.json identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "data/model_dataset_995.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "work/labels.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "study_controlled_rotation/data/counterfactual_cases.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "A0 OOF == Stage A OOF exactly (3 repeats)",
+   "passed": true,
+   "detail": "max |diff| 0.00e+00"
+  },
+  {
+   "gate": "G2",
+   "check": "switching SHAP share A0 < W2 < W5 < W10",
+   "passed": true,
+   "detail": "W0 0.0000 | A0 0.0578 | W2 0.1937 | W5 0.3150 | W10 0.3795"
+  },
+  {
+   "gate": "G2",
+   "check": "share(W10) >= 2 x share(A0)",
+   "passed": true,
+   "detail": "ratio 6.57"
+  }
+ ],
+ "seconds": 247
+}

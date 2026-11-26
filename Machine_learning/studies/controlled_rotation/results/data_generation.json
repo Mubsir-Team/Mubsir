@@ -1,0 +1,38 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "check": "ROT vs BLK per-channel injected deviation identical (H146, S8), max |diff|",
+   "passed": true,
+   "detail": "2.22e-16; hosts failing: 0"
+  },
+  {
+   "check": "total injected deviation = L x delta for ROT/BLK/FIX (H146, S8)",
+   "passed": true,
+   "detail": "max |diff| 0.00e+00"
+  },
+  {
+   "check": "each channel gets L/3 of the deviation in ROT and BLK (H146, S8)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "no deviation change outside the attack days' own E_today",
+   "passed": true,
+   "detail": "0.00e+00"
+  },
+  {
+   "check": "H146 hosts surviving verification >= 120 (else primary inconclusive)",
+   "passed": true,
+   "detail": "145"
+  }
+ ],
+ "hosts_253": 253,
+ "H146": 146,
+ "H146_surviving": 145,
+ "R107": 107,
+ "excluded": 138,
+ "cases": 2252,
+ "rows": 236796,
+ "seconds": 35
+}

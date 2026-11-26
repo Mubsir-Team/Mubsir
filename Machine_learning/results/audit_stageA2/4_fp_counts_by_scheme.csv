@@ -1,0 +1,7 @@
+scheme,repeat,fold_fp,fold_benign
+frozen_leave_fold_out,0,6,511
+frozen_leave_fold_out,1,5,511
+frozen_leave_fold_out,2,9,511
+pooled_same_set,0,5,511
+pooled_same_set,1,5,511
+pooled_same_set,2,5,511

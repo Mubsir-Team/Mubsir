@@ -1,4 +1,0 @@
-[  23s] w5: thrD raw 0.6310 (=stored) risk 64.6 | thrW raw 0.3213 risk 35.1 | platt 0.948x+0.093 | native roundtrip OK
-[  44s] w10: thrD raw 0.6088 (=stored) risk 60.7 | thrW raw 0.2725 risk 29.4 | platt 0.922x+0.028 | native roundtrip OK
-[  60s] w20: thrD raw 0.6421 (=stored) risk 62.8 | thrW raw 0.3008 risk 30.9 | platt 0.930x+-0.022 | native roundtrip OK
-saved bundle to /tmp/claude-0/repro/model | input columns: 77 | 60s

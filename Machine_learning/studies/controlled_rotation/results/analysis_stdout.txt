@@ -1,0 +1,37 @@
+regime 1 detection done 1s
+regime 2 detection done 1s
+
+PRIMARY  Delta = -0.0080  CI [-0.0276, +0.0115]  p=0.438
+   Det('D', 'ROT') = 0.8241
+   Det('D', 'BLK') = 0.8310
+   Det('C+', 'ROT') = 0.8356
+   Det('C+', 'BLK') = 0.8345
+   D-C+ on ROT -0.0115  on BLK -0.0034
+S1      -0.0138  CI [-0.0379, +0.0103]  p=0.313  holm=1.000
+S2      -0.0115  CI [-0.0276, +0.0046]  p=0.170  holm=1.000
+S3      -0.0092  CI [-0.0276, +0.0080]  p=0.313  holm=1.000
+S4      -0.0069  CI [-0.0172, +0.0000]  p=0.250  holm=1.000
+S5      +0.0387  CI [+0.0226, +0.0571]  p=0.000  holm=0.000
+S6_L6   -0.0138  CI [-0.0529, +0.0253]  p=0.481  holm=1.000
+S6_L12  -0.0023  CI [-0.0138, +0.0092]  p=0.785  holm=1.000
+S7      -0.0054  CI [-0.0187, +0.0074]  p=0.437  holm=1.000
+S8      -0.0417  CI [-0.1061, +0.0204]  p=0.198  holm=1.000
+outcome-1 conditions: {'delta_ge_0_02': np.False_, 'delta_ci_above_0': False, 'rot_gain_positive_ci_above_0': np.False_, 'no_ceiling_floor': True} ceiling: False
+o2: True o3: False -> Outcome 2 - distributed deviation matters, explicit switching does not
+held-out benign FPR (mean):
+regime  arm   fpr 
+1       A-cv  0.01    0.0131
+              0.03    0.0346
+        B     0.01    0.0117
+              0.03    0.0307
+        C     0.01    0.0124
+              0.03    0.0300
+        C+    0.01    0.0118
+              0.03    0.0320
+        D     0.01    0.0124
+              0.03    0.0333
+2       C+    0.01    0.0098
+              0.03    0.0314
+        D     0.01    0.0117
+              0.03    0.0314
+done 3 s

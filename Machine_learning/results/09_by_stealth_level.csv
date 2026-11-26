@@ -1,0 +1,4 @@
+stealth_level,dev_attackers,dev_detected@85,dev_range_3_repeats,dev_latency_median,dev_latency_p90,dev_row_pr_auc,test_attackers,test_detected@85,test_rate_95CI,test_latency_median,test_row_pr_auc,small_cell
+High (0.25),117,0.7492877492877493,0.73-0.77,6.0,14.800000000000011,0.798211621707355,17,14/17,0.57-0.96,6.0,0.8359165085910589,
+Low (0.75),115,1.0,1.00-1.00,1.0,4.0,0.9818664898037556,18,17/18,0.73-1.00,2.0,0.9822569018878565,
+Medium (0.50),116,0.9712643678160919,0.97-0.97,3.0,6.0,0.9514414788665979,17,16/17,0.71-1.00,1.5,0.9722465379106566,

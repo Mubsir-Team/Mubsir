@@ -1,26 +1,35 @@
-# MUBSIR inference bundle (stage 1, FINAL75)
+# MUBSIR model bundle (single model, y_10)
 
-Files: `SHA256SUMS.txt` + `verify_bundle.py` (integrity check), `manifest.json` (feature order per window, calibration, thresholds), `lgbm_w{5,10,20}.txt` (LightGBM native models), `mubsir_infer.py` (scoring + SHAP), `example_input.parquet` (3 test users, 77 input columns).
-Dependencies: numpy, pandas, lightgbm. No pickles, no scalers/encoders (trees; NaN is handled natively).
+| File | Purpose |
+|---|---|
+| `lgbm_y10.txt` | LightGBM model, native text format (237 trees, defaults) |
+| `manifest.json` | Feature order (100), Platt calibration, thresholds, provenance hashes |
+| `mubsir_infer.py` | `MubsirScorer`: `score`, `score_users`, `explain`, `thresholds` |
+| `verify_bundle.py` | Standard-library SHA-256 check against `SHA256SUMS.txt` |
+| `example_input.parquet` | 60 dev feature rows (2 users) to try the scorer |
+| `requirements.txt` | Versions the bundle was built and verified with |
+| `SHA256SUMS.txt` | Hashes of every file above |
 
+## Usage
 ```python
-from mubsir_infer import MubsirScorer
 import pandas as pd
-sc   = MubsirScorer()                                  # bundle directory = this folder
-X    = pd.read_parquet("example_input.parquet")        # user, day + the 77 feature columns
-rows = sc.score(X)                                     # risk_5/10/20, level_* (Low/Medium/High), risk (max), level, alert (= High), alert_windows
-users= sc.score_users(rows)                            # per-user peak risk, level (Low/Medium/High), first_alert_day
-why  = sc.explain(X.iloc[[100]], window=10, top_k=5)   # top SHAP contributions (log-odds) for that prediction
-print(sc.explain_text(X.iloc[[100]], 10, 4))
+from mubsir_infer import MubsirScorer
+s = MubsirScorer(".")                         # refuses to load if any hash differs
+rows = pd.read_parquet("example_input.parquet")
+s.score(rows)          # user, day, risk, level, alert, model_version
+s.score_users(rows)    # risk_peak, n_days, peak_day, first_alert_day, level, alert
+s.explain(rows, k=5)   # dicts for model_prediction_outputs.shap_explanation_jsonb
 ```
-CLI: `python mubsir_infer.py example_input.parquet --explain 4`
 
-## Contract
-- **Input**: one row per user-workday with the columns in `manifest["input_columns_all"]` (77 = 74 agreed features + `nr_gap_alt_2_{5,10,20}wd`; each window model uses its own 75). Column order is irrelevant (re-ordered by the manifest); extra columns ignored; missing columns raise an error; NaN allowed. Features must come from the project's causal feature pipeline (rolling windows over the user's workday history, 2010 baseline percentiles).
-- **Score**: raw = model probability; `risk_h = 100*sigmoid(platt_coef*logit(raw)+platt_intercept)`.
-- **Risk and levels**: `risk` is a calibrated probability x 100 that the user-day lies inside an exfiltration window (not a direct deviation magnitude; deviation enters via the features, mainly `cumulative_deviation_*`). Fixed thresholds **60 and 85**: Low `risk <= 60`; Medium `60 < risk <= 85`; High `risk > 85`; alert = High. A user's level uses his peak risk over the period (max over windows). On the 199 held-out users, High rows are true attack rows 98-99% of the time, Low rows 3-6%, Medium 72-78%.
-- **SHAP**: TreeSHAP in log-odds of the raw score; positive = raises risk.
-- **Limits**: models trained on 796 development users of the simulated CERT r6.2 data; the 199 test users were never used for training, calibration or thresholds. Not validated on other datasets.
+## Input contract
+- One row per (eligible employee, workday) with the 100 columns named in `manifest.json`, computed exactly as in training (team feature definitions + `E_*_today`).
+- NaN is allowed only in `channel_distribution_shift_{5,10,20,30}wd` (a window without any activity). It must never be replaced by 0. Any other NaN, a missing column or an infinite value raises `ValueError`.
+- Scope: the 995 eligible multi-channel employees (USB or HTTP baseline in 2010). Other employees are out of scope.
 
-## Integrity (run before loading)
-`python verify_bundle.py --root-hash <pinned sha256>` checks every file in this folder against `SHA256SUMS.txt` and fails on a missing, modified or unlisted file; `from verify_bundle import verify_bundle; verify_bundle("model", expected_root_sha256=...)` does the same in code. The root hash (sha256 of `SHA256SUMS.txt`) must be stored where the writers of the model files cannot edit it (deployment config, signed tag, approval ticket): a `version` field in `manifest.json` or a hash list next to the files proves nothing on its own. Hashes of this release: `../docs/RELEASE_HASHES.md`.
+## Output meaning
+- `risk` (0–100): calibrated daily probability ×100 that the employee had at least one attack day in the last 10 workdays, under the development population mix. It is **not** the probability that the employee is malicious.
+- `level`: Low `risk <= 60`, Medium `60 < risk <= 85`, High `risk > 85`. `alert` = `risk > 85`.
+- `risk_peak`: maximum daily risk over the rows given. It is a ranking statistic and grows with the number of days observed.
+
+## Interface change from the previous bundle
+One model replaces the three horizon models. There are no `risk_5`, `risk_10`, `risk_20` or `alert_windows` fields any more; `risk` is the single score.

@@ -1,0 +1,17 @@
+,detected_3of3,missed_3of3,unstable,benign_users_p99_of_peak
+sum_injected_dE,6.0,2.764705882352953,5.0,
+max_cd10_in_window,8.873015873015891,5.5,7.999999999999999,10.177131782945759
+max_cd5_in_window,8.25,4.4,6.333333333333332,7.486363636363634
+max_score_in_window,0.984740449942258,0.6277518516625533,0.8943082279511204,0.9257233375153621
+max_nr_m_5wd_in_window,3.0,2.0,3.0,
+max_nr_alt_5wd_in_window,0.75,1.0,0.75,
+pre_window_days,3.5,4.0,17.0,
+pre_window_max_cd10,2.062500000000001,2.6346604215456697,4.958333333333334,
+pre_window_max_score,0.031899456489736674,0.024201691996078797,0.2319910657105616,
+multi_channel_days,0.0,0.0,0.0,
+switches,1.0,1.0,3.0,
+total_injected_events,19.5,13.0,13.0,
+mean_count_added,3.9000000000000004,2.6,2.6,
+mean_baseline_p95,6.7,7.4,5.4,
+mean_count_before,3.7,3.8,2.2,
+users,20.0,21.0,5.0,

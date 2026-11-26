@@ -1,0 +1,23 @@
+{
+  "algorithm": "lightgbm",
+  "horizon": 10,
+  "rule_A_per_algo_mean_over_h": {
+    "recall@1%fpr": {
+      "catboost": 0.86326,
+      "decision_tree": 0.74442,
+      "lightgbm": 0.85969,
+      "random_forest": 0.80291,
+      "xgboost": 0.85743
+    },
+    "pr_auc": {
+      "catboost": 0.94331,
+      "decision_tree": 0.87718,
+      "lightgbm": 0.94306,
+      "random_forest": 0.91014,
+      "xgboost": 0.94219
+    }
+  },
+  "rule_A_qualifying": {},
+  "rule_B_qualifying": {},
+  "mean_trees_selected": 237.33333333333334
+}

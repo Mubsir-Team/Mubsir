@@ -1,0 +1,35 @@
+{
+ "preregistration_sha256": "b7ca05e51c65c1483b017d6546077f76d6aeee76b850522efcc192e9a28bd8b2",
+ "dev_users": 859,
+ "attackers": 348,
+ "benign": 511,
+ "feature_counts": {
+  "email": 17,
+  "usb_file": 16,
+  "http": 15,
+  "context": 2,
+  "cross": 50
+ },
+ "conditions": {
+  "primary_gap_ci_excludes_0": true,
+  "siloed_hurt_by_rotation": false,
+  "mubsir_not_hurt": true
+ },
+ "verdict": "PARTIAL",
+ "primary": {
+  "DA_high": 0.9217391304347826,
+  "DA_low": 0.8660968660968661,
+  "DB_high": 0.8463768115942029,
+  "DB_low": 0.8717948717948718,
+  "gap": 0.08106032453858547,
+  "B_high_minus_low": -0.025418060200668946,
+  "A_high_minus_low": 0.055642264337916525,
+  "gap_ci_low": 0.0037396259135390104,
+  "gap_ci_high": 0.1560770469466121,
+  "B_high_minus_low_ci_low": -0.11197943763161149,
+  "B_high_minus_low_ci_high": 0.06094760312151612,
+  "A_high_minus_low_ci_low": -0.019026384243775563,
+  "A_high_minus_low_ci_high": 0.13311160658986745
+ },
+ "seconds": 80
+}

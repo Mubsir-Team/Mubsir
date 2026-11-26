@@ -1,0 +1,12 @@
+{
+ "arms": {
+  "B": 50,
+  "C": 65,
+  "C+": 87,
+  "A-cv": 100,
+  "D": 110
+ },
+ "personal_norm_kept": true,
+ "acv_reproduces_stageA": true,
+ "seconds": 277
+}

@@ -1,0 +1,23 @@
+shortcut gate: folded AUC of base_rate = 0.572 -> personal-norm features KEPT
+regime 1 r0 k0 done 35s
+regime 1 r0 k1 done 42s
+regime 1 r0 k2 done 53s
+regime 1 r0 k3 done 63s
+regime 1 r0 k4 done 74s
+regime 1 r1 k0 done 84s
+regime 1 r1 k1 done 95s
+regime 1 r1 k2 done 105s
+regime 1 r1 k3 done 114s
+regime 1 r1 k4 done 121s
+regime 1 r2 k0 done 129s
+regime 1 r2 k1 done 141s
+regime 1 r2 k2 done 152s
+regime 1 r2 k3 done 159s
+regime 1 r2 k4 done 168s
+A-cv reproduces Stage A OOF exactly: True
+regime 2 k0 done 187s
+regime 2 k1 done 205s
+regime 2 k2 done 231s
+regime 2 k3 done 250s
+regime 2 k4 done 275s
+done 277 s

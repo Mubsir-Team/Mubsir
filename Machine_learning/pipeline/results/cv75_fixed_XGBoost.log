@@ -1,6 +1,0 @@
-{'FINAL74': 74, 'FINAL75': 75}
-dev users 796 (inj 536) | test users 199 (inj 134, ctrl 65) | shared scenarios dev/test: 0
-[1014s] XGBoost window 5 done
-[1494s] XGBoost window 10 done
-[1583s] XGBoost window 20 done
-saved 255 rows | 1584s | done

@@ -1,0 +1,17 @@
+{
+  "model_file": "bed7670c6664186b05366d728634638cb7a1d4ea7977f648c09bb58ff70c45ce",
+  "manifest": "59ccbd5ff92111a0311cb5588eef5a91b58c975f106c3d4d96f4e8eb7708a84c",
+  "final_split": "f29ac70b0bfd1bbce3f1758519514df898ccc85008354d285812e535b47b7749",
+  "selection_rules": "41de4354e861fb08f2018d76ee1d35fe45cbd3b3b4af3a37a96fba70fdf5deb0",
+  "dataset": "1b26162ba13fd53f049e47608ea86efeb70d6ec42ba5839c9d7dda548337ddbc",
+  "calibration": {
+    "a": 0.9549492194448311,
+    "b": 0.07595876799813961
+  },
+  "thresholds": {
+    "medium": 60.0,
+    "high": 85.0,
+    "dev_1pct_user_fpr": 92.63198568310092,
+    "operator": ">"
+  }
+}

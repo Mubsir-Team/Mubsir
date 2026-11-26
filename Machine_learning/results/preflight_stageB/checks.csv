@@ -1,0 +1,20 @@
+check,status,detail
+V1 fit / es / valid users disjoint in all 15 outer folds,PASS,0
+V1 fit / es / valid schedule groups disjoint in all 15 outer folds,PASS,0
+V1 fit + es + valid = all dev users in every outer fold,PASS,0
+V2 lightgbm eval_set is the es data only (source),PASS,
+V1 in-memory refit reproduces the cached default OOF (15 folds),PASS,max abs diff 0.00e+00
+V1/V2 refit tree counts equal Stage A best iterations,PASS,0
+V1 label-poison test: random validation labels change no prediction,PASS,0.00e+00
+V2 booster evaluated only on the es set; best iteration reproduced,PASS,0
+V1 every dev row scored exactly once per repeat by its own outer fold,PASS,268413 = 3 x 89471
+V3 LFO threshold source users exclude the outer-validation fold,PASS,
+V3 LFO threshold source SCORES come from models not trained on the outer-validation fold,MISMATCH,"in every fold, all 4 sibling models were trained on fold-k users"
+Planned inner splits: no schedule group shared between inner fit / es / valid,PASS,
+Planned inner splits: early-stopping share 10-20%,PASS,0.142-0.149
+Planned inner splits: all 6 durations in every inner validation fold,PASS,6
+Inner-OOF threshold resolution: benign outer-train users per outer fold,PASS,408-410 benign users -> k = 4-4 FP at 1%
+"V4 two independent duration-macro implementations agree (pooled, 3 repeats)",PASS,1.1e-16
+V4 implementation equals the audit-2 values used for the objective decision,PASS,0.0e+00
+"V4 duration groups come from user_meta.window_workdays (evaluation only, not a predictor)",PASS,
+V4 all 6 durations in every outer-validation fold,PASS,6

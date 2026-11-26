@@ -1,0 +1,14 @@
+spw r0k1 AP 0.9333 det 56/69 fp 1 trees 119 20s
+spw r0k2 AP 0.9498 det 63/69 fp 0 trees 361 22s
+spw r0k3 AP 0.9380 det 58/69 fp 2 trees 218 18s
+spw r0k4 AP 0.9426 det 61/69 fp 0 trees 221 19s
+spw r1k0 AP 0.9413 det 62/72 fp 1 trees 342 19s
+spw r1k1 AP 0.9401 det 61/69 fp 1 trees 229 22s
+spw r1k2 AP 0.9482 det 61/70 fp 0 trees 335 23s
+spw r1k3 AP 0.9471 det 58/69 fp 2 trees 260 19s
+spw r1k4 AP 0.9384 det 53/68 fp 2 trees 93 22s
+spw r2k0 AP 0.9359 det 55/71 fp 1 trees 165 22s
+spw r2k1 AP 0.9390 det 60/70 fp 0 trees 238 20s
+spw r2k2 AP 0.9468 det 59/69 fp 1 trees 199 23s
+spw r2k3 AP 0.9403 det 59/69 fp 1 trees 206 15s
+spw r2k4 AP 0.9467 det 61/69 fp 1 trees 157 15s

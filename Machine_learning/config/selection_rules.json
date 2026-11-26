@@ -1,0 +1,112 @@
+{
+  "written": "2026-11-24, before any model was trained on this dataset",
+  "data": "dev users only (config/cv_folds.csv: 5 folds x 3 repeats, schedule-grouped); the test part plays no role",
+  "rule_A_algorithm": {
+    "incumbent": "lightgbm",
+    "challengers": ["xgboost", "catboost", "random_forest", "decision_tree"],
+    "metric_primary": "row recall@1%fpr on the model's own label y_h (reference negatives = benign-user rows), mean over the 15 folds, then averaged over h = 5, 10, 20",
+    "metric_guard": "row PR-AUC on y_h, same averaging",
+    "replace_if": "challenger primary >= incumbent primary + 0.005 AND challenger guard >= incumbent guard",
+    "tie_break": "if several challengers qualify, the largest primary gain wins"
+  },
+  "rule_B_horizon": {
+    "applies_to": "the algorithm selected by rule A",
+    "default": 10,
+    "candidates": [5, 20],
+    "metric_primary": "user_recall@1%ufpr: attackers with an in-window alarm above the threshold at which 1% of benign dev users ever alarm (pooled out-of-fold scores per repeat, mean of 3 repeats)",
+    "guards": [
+      "user_auc (peak score) >= default - 0.002",
+      "latency_median@1%ufpr (workdays from first injected day) <= default + 1"
+    ],
+    "replace_if": "candidate primary >= default primary + 0.005 AND all guards hold",
+    "tie_break": "if both candidates qualify, the larger primary gain wins"
+  },
+  "later_stages_superseded": {
+    "note": "Original 2026-11-24 text, kept for transparency. Replaced by stage_B before any tuning or ablation was run (see stage_B.change_record).",
+    "tuning_adoption": "Optuna result adopted only if CV recall@1%fpr >= default + 0.005 AND PR-AUC >= default (selected h, dev CV)",
+    "ablation_adoption": "same rule as tuning; ablations that remove artifacts (C1) are documentation only and never adopted"
+  },
+  "stage_B": {
+    "change_record": {
+      "date": "2026-11-24",
+      "approved_by": "project owner (chat approval)",
+      "status_at_registration": "Stage A finished (rules A and B applied: lightgbm, y_10). No Optuna trial, no calibration, no ablation and no test score existed.",
+      "reason": "Stage A audits (reports/audit_stageA.md, reports/audit_stageA2.md): row PR-AUC weights attackers by their positive rows (50-day windows 29.3% of y_10 positives, 5-day 5.3%) and hides the 5-day weakness (row PR-AUC 0.50 for 5-day vs 0.95 for 50-day). The objective is chosen for equal weight per attack duration with day-level timing kept, not for its score.",
+      "unchanged": "split, labels, features, rule_A (lightgbm), rule_B (y_10), fixed 60/85 bands"
+    },
+    "model": "lightgbm, label y_10, the 100 predictors of the model dataset",
+    "definitions": {
+      "duration_macro_row_pr_auc": "For each attack duration d in {5,10,20,30,40,50}: average precision on y_10 over the rows of all benign users plus the attackers whose window_workdays = d, within the evaluation set. Objective = unweighted mean of the 6 values.",
+      "row_pr_auc": "average precision on y_10 over all rows of the evaluation set",
+      "frozen_lfo_user_recall_1pct_superseded": "SUPERSEDED by amendment_2 (the sibling-model scores depend on the validation fold). Original: for each validation fold, threshold = score exceeded by at most 1% of the peak scores of benign users in the OTHER folds of the same repeat; an attacker of this fold is detected if any in-window row scores above it. Recall over all dev attackers per repeat, mean of 3 repeats.",
+      "frozen_inner_user_recall_1pct": "For outer fold (r, k) and a given arm (default or tuned): (1) the arm's configuration is trained on the 5 inner folds of the outer-train users only (nested_cv.per_outer_fold_tuning splits and early-stopping users); (2) each outer-train user's peak = max of its inner out-of-fold scores over the whole period; (3) threshold = threshold_at_fpr(benign outer-train peaks, 0.01), frozen; (4) the outer model of the same arm scores the outer-validation users; an attacker is detected if any in-window row scores above the frozen threshold. Recall = detected / all dev attackers, pooled over the 5 outer folds of a repeat, mean of 3 repeats. The realised false-positive count (benign outer-validation users whose peak exceeds the threshold) is reported for every outer fold."
+    },
+    "amendment_2": {
+      "date": "2026-11-24",
+      "approved_by": "project owner (chat approval)",
+      "status_at_amendment": "no Optuna trial had been run",
+      "reason": "Pre-flight check V3 (reports/stageB_preflight.md): the leave-fold-out threshold used OOF scores from sibling models, all of which were trained on the outer-validation users. Replaced by frozen_inner_user_recall_1pct, which uses only outer-train users and models trained only on them.",
+      "default_arm_cost": "5 inner default fits per outer fold (75 LightGBM fits); the tuned arm reuses the inner OOF of its best Optuna trial",
+      "caveat": "inner models see about 80% of the outer-train users, so their score scale may differ slightly from the outer model; the realised FP count per outer fold is reported next to the recall"
+    },
+    "amendment_1": {
+      "date": "2026-11-24",
+      "approved_by": "project owner (chat approval)",
+      "status_at_amendment": "no Optuna trial had been run",
+      "reason": "In the first registration, Optuna's inner CV and the 15-fold adoption comparison used the same 859 dev users, so the comparison would favour the tuned configuration (selection bias). Replaced by nested CV: Optuna never sees the users of the outer validation fold it is evaluated on."
+    },
+    "nested_cv": {
+      "outer_folds": "the 15 folds of config/cv_folds.csv (repeat r in 0..2, fold k in 0..4); outer-train users = roles fit + es, outer-validation users = role valid",
+      "per_outer_fold_tuning": "Optuna runs on the outer-train users ONLY. Inner CV = StratifiedGroupKFold(5, shuffle=True, random_state=142 + 10*r + k) on the outer-train users, groups and strata as in config/final_split.csv. Inside each inner-train set, early-stopping users = fold 0 of StratifiedGroupKFold(7, shuffle=True, random_state=1142 + 100*r + 10*k + inner_fold). Objective, sampler, trials, trial 0 and search space as in `optuna`.",
+      "per_outer_fold_evaluation": "the best configuration of that outer fold is trained on the outer fit users with early stopping on the outer es users (exactly as in Stage A, seed 42 + r) and scores the outer-validation users, which Optuna never saw",
+      "default_arm": "LightGBM defaults on the same outer folds, seeds and early-stopping users (the Stage A lightgbm y_10 OOF; recomputed and required to match)",
+      "nested_estimate": "the tuned-procedure OOF scores (each validation row scored by its own outer fold's tuned model) are evaluated with the metrics in `definitions`, exactly as the default arm",
+      "reported": "per outer fold: chosen parameters, inner objective of the best trial, inner objective of trial 0 (default), outer metrics; spread of the chosen parameters across the 15 folds",
+      "cost": "15 outer folds x 60 trials x 5 inner fits = 4,500 LightGBM fits plus 30 outer fits"
+    },
+    "optuna": {
+      "data": "dev users only; within nested CV, the outer-train users of each outer fold only",
+      "inner_cv": "see nested_cv.per_outer_fold_tuning; for the final run (only if tuning is adopted): StratifiedGroupKFold(5, shuffle=True, random_state=142) on all 859 dev users, early-stopping users = fold 0 of StratifiedGroupKFold(7, shuffle=True, random_state=1142 + inner_fold)",
+      "objective": "duration_macro_row_pr_auc computed ONCE on the pooled out-of-fold scores of the 5 inner folds, maximised",
+      "sampler": "TPESampler(seed=42)",
+      "n_trials": 60,
+      "trial_0": "the default configuration (models.LGBM_DEFAULTS) is enqueued as trial 0",
+      "early_stopping": "metric average_precision, 30 rounds, <= 800 trees (unchanged)",
+      "search_space": {
+        "learning_rate": "log-uniform [0.01, 0.2]",
+        "num_leaves": "log-int [15, 255]",
+        "max_depth": "int [-1, 12], -1 = unlimited (values 0-2 mapped to -1)",
+        "min_child_samples": "log-int [10, 300]",
+        "subsample": "uniform [0.5, 1.0] (subsample_freq = 1)",
+        "colsample_bytree": "uniform [0.4, 1.0]",
+        "reg_lambda": "log-uniform [1e-3, 30]",
+        "reg_alpha": "log-uniform [1e-3, 10]",
+        "min_split_gain": "uniform [0.0, 1.0]"
+      },
+      "no_reweighting": "no class weights and no scale_pos_weight in the tuning search"
+    },
+    "tuning_adoption": {
+      "evaluation": "nested-CV tuned-procedure OOF vs default OOF on the same 15 outer folds (nested_cv)",
+      "primary": "duration_macro_row_pr_auc on pooled OOF per repeat, mean of 3 repeats",
+      "adopt_if": [
+        "tuned primary >= default primary + 0.005",
+        "tuned row_pr_auc (15-fold mean) >= default row_pr_auc - 0.002",
+        "tuned frozen_inner_user_recall_1pct >= default frozen_inner_user_recall_1pct"
+      ],
+      "if_adopted": "run Optuna once on all 859 dev users (optuna.inner_cv final run) to obtain the final parameters. The expected performance reported for them is the nested estimate, never their own tuning score.",
+      "otherwise": "keep the default configuration"
+    },
+    "ablation_adoption": {
+      "rule": "same three conditions as tuning_adoption, comparing the ablated variant with the adopted Stage B configuration on the 15 outer folds",
+      "documentation_only": "the C1 companion-column variant (artifact documentation) is never adopted, whatever its scores"
+    },
+    "calibration": {
+      "method": "Platt scaling risk = 100 * sigmoid(a * logit(p) + b)",
+      "fit_data": "out-of-fold scores of the adopted configuration on the 15 outer folds, all 3 repeats stacked (each dev row 3 times), row level, target y_10. Default adopted: the Stage A lightgbm y_10 OOF. Tuned adopted: the final parameters re-run on the 15 outer folds (their scores are slightly optimistic because the parameters were chosen on all dev users; this is documented).",
+      "reported": "a, b per repeat in addition to the stacked fit, to show stability",
+      "meaning": "Layer 1 only: calibrated daily P(at least one injected attack day in the last 10 workdays | features at t) under the dev population mix; not a per-employee probability"
+    },
+    "final_fit": "refit on all dev users with the mean best-iteration count of the 15 outer folds",
+    "test_protocol": "test opened once, after the final fit; every threshold frozen from dev (fixed 60/85 bands and the dev 1% user-FPR threshold on the risk scale); FP counts out of 84 benign test users reported with exact CIs; no decision is changed after test scores are seen"
+  }
+}

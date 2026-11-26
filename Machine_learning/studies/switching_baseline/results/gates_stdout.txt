@@ -1,0 +1,28 @@
+[PASS] setup P1 = 714 eligible users (347 attackers)  
+[PASS] G1 ROT toy: pairs 5, changes 5, rate_dev_hab 0.6, excess_hab 3  
+[PASS] G1 BLK toy: pairs 5, changes 2, rate_dev_hab 0, excess_hab 0  
+[PASS] G1 quiet window: all features 0  
+[PASS] G1 causality: features at row t unchanged when later rows change  
+[PASS] G1 r0 recomputed = habit_2010_dev_users.csv for 714 users (|diff| <= 1e-12)  max 0.0e+00
+[PASS] setup P1 rows sorted by user then day  
+[PASS] setup P2 = 123 hosts, 246 ROT and 246 BLK cases  
+[PASS] G2 shortcut AUC rate_dev_pop_10 < 0.60  0.513
+[PASS] G2 shortcut AUC excess_pop_10 < 0.60  0.519
+[PASS] G2 shortcut AUC rate_dev_pop_20 < 0.60  0.513
+[PASS] G2 shortcut AUC excess_pop_20 < 0.60  0.525
+[PASS] G2 shortcut AUC rate_dev_hab_10 < 0.60  0.567
+[PASS] G2 shortcut AUC excess_hab_10 < 0.60  0.553
+[PASS] G2 shortcut AUC rate_dev_hab_20 < 0.60  0.568
+[PASS] G2 shortcut AUC excess_hab_20 < 0.60  0.553
+[PASS] G3 every restricted validation fold has >= 20 benign and >= 20 attackers  min benign 67, min attackers 68
+[PASS] G3 no fit/es/valid group overlap  
+[PASS] G3 every P1 user in exactly one validation fold per repeat  
+[PASS] G4 pipeline/common.py identical to hashes_before.json  
+[PASS] G4 pipeline/models.py identical to hashes_before.json  
+[PASS] G4 pipeline/metrics.py identical to hashes_before.json  
+[PASS] G4 pipeline/05_tune.py identical to hashes_before.json  
+[PASS] G4 config/cv_folds.csv identical to hashes_before.json  
+[PASS] G4 config/selection_rules.json identical to hashes_before.json  
+[PASS] G4 data/model_dataset_995.parquet identical to hashes_before.json  
+[PASS] G4 work/labels.parquet identical to hashes_before.json  
+GATES: proceed | G2 users 689

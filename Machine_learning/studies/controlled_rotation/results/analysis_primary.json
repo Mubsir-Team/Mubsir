@@ -1,0 +1,243 @@
+{
+ "preregistration_sha256": "954fe7d4bfadbea19e4f5b6ad7df0a18b6c95cd17c24d15c28ca3d67644e24fe",
+ "hosts": {
+  "H146": 145,
+  "H146_benign": 73,
+  "H146_attacker": 72,
+  "relaxed": 249,
+  "S8": 36
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "unit": "host, stratified benign/attacker",
+  "seed": 2026
+ },
+ "primary": {
+  "id": "PRIMARY",
+  "estimand": "[D-C+](ROT) - [D-C+](BLK), iso-FPR 3%, regime 1, H146",
+  "estimate": -0.008045977011494232,
+  "ci_low": -0.02758620689655178,
+  "ci_high": 0.011494252873563204,
+  "p_two_sided": 0.438
+ },
+ "primary_components": {
+  "D|ROT": 0.8241379310344827,
+  "D|BLK": 0.8310344827586207,
+  "C+|ROT": 0.835632183908046,
+  "C+|BLK": 0.8344827586206897
+ },
+ "rot_gain": {
+  "id": "S2",
+  "estimand": "Det(D,ROT) - Det(C+,ROT), iso-FPR 3%",
+  "estimate": -0.011494252873563204,
+  "ci_low": -0.027586206896551557,
+  "ci_high": 0.004597701149425482,
+  "p_two_sided": 0.17,
+  "p_holm": 1.0,
+  "significant_holm": false
+ },
+ "blk_gain": {
+  "id": "desc_BLK",
+  "estimand": "Det(D,BLK) - Det(C+,BLK), iso-FPR 3% (descriptive)",
+  "estimate": -0.0034482758620689724,
+  "ci_low": -0.01839080459770115,
+  "ci_high": 0.01152298850574706,
+  "p_two_sided": 0.672
+ },
+ "outcome1_conditions": {
+  "delta_ge_0_02": false,
+  "delta_ci_above_0": false,
+  "rot_gain_positive_ci_above_0": false,
+  "no_ceiling_floor": true
+ },
+ "ceiling_or_floor": false,
+ "secondary": [
+  {
+   "id": "S1",
+   "estimand": "primary interaction at iso-FPR 1%",
+   "estimate": -0.01379310344827589,
+   "ci_low": -0.037931034482758696,
+   "ci_high": 0.010344827586207028,
+   "p_two_sided": 0.313,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S2",
+   "estimand": "Det(D,ROT) - Det(C+,ROT), iso-FPR 3%",
+   "estimate": -0.011494252873563204,
+   "ci_low": -0.027586206896551557,
+   "ci_high": 0.004597701149425482,
+   "p_two_sided": 0.17,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S3",
+   "estimand": "[A-cv-C+](ROT) - [A-cv-C+](BLK), iso-FPR 3%",
+   "estimate": -0.009195402298850519,
+   "ci_low": -0.02758620689655156,
+   "ci_high": 0.008045977011494343,
+   "p_two_sided": 0.313,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S4",
+   "estimand": "primary interaction under regime 2 (repeat 0, trained with counterfactual data)",
+   "estimate": -0.006896551724137945,
+   "ci_low": -0.017241379310344862,
+   "ci_high": 0.0,
+   "p_two_sided": 0.25,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S5",
+   "estimand": "[C+-C](BLK) - [C+-C](FIX pooled), iso-FPR 3%",
+   "estimate": 0.03869731800766263,
+   "ci_low": 0.022605363984674384,
+   "ci_high": 0.057088122605364,
+   "p_two_sided": 0.0,
+   "p_holm": 0.0,
+   "significant_holm": true
+  },
+  {
+   "id": "S6_L6",
+   "estimand": "primary interaction, L = 6 only",
+   "estimate": -0.01379310344827589,
+   "ci_low": -0.05287356321839076,
+   "ci_high": 0.025287356321838983,
+   "p_two_sided": 0.481,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S6_L12",
+   "estimand": "primary interaction, L = 12 only",
+   "estimate": -0.0022988505747124632,
+   "ci_low": -0.01379310344827589,
+   "ci_high": 0.00919540229885063,
+   "p_two_sided": 0.785,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S7",
+   "estimand": "primary interaction, relaxed cohort (249 hosts: H146 + approximate R253)",
+   "estimate": -0.0053547523427039945,
+   "ci_low": -0.018741633199464428,
+   "ci_high": 0.007362784471218409,
+   "p_two_sided": 0.437,
+   "p_holm": 1.0,
+   "significant_holm": false
+  },
+  {
+   "id": "S8",
+   "estimand": "primary interaction, strict natural-activity cohort (36 hosts)",
+   "estimate": -0.041666666666666685,
+   "ci_low": -0.10606866537717609,
+   "ci_high": 0.020418792517006762,
+   "p_two_sided": 0.198,
+   "p_holm": 1.0,
+   "significant_holm": false
+  }
+ ],
+ "s5_components": {
+  "C+|BLK": 0.8344827586206897,
+  "C+|FIX": 0.7157088122605365,
+  "C|BLK": 0.8390804597701149,
+  "C|FIX": 0.7590038314176244
+ },
+ "outcome2_applies": true,
+ "outcome3_applies": false,
+ "outcome": 2,
+ "outcome_label": "Outcome 2 - distributed deviation matters, explicit switching does not",
+ "heldout_benign_fpr": [
+  {
+   "regime": 1,
+   "arm": "A-cv",
+   "fpr": 0.01,
+   "heldout_fpr": 0.013066052464755328
+  },
+  {
+   "regime": 1,
+   "arm": "A-cv",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03462921392082098
+  },
+  {
+   "regime": 1,
+   "arm": "B",
+   "fpr": 0.01,
+   "heldout_fpr": 0.011745920451554008
+  },
+  {
+   "regime": 1,
+   "arm": "B",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03068835724234902
+  },
+  {
+   "regime": 1,
+   "arm": "C",
+   "fpr": 0.01,
+   "heldout_fpr": 0.012386698407133688
+  },
+  {
+   "regime": 1,
+   "arm": "C",
+   "fpr": 0.03,
+   "heldout_fpr": 0.030047327976658315
+  },
+  {
+   "regime": 1,
+   "arm": "C+",
+   "fpr": 0.01,
+   "heldout_fpr": 0.011758611612160646
+  },
+  {
+   "regime": 1,
+   "arm": "C+",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03202105476110147
+  },
+  {
+   "regime": 1,
+   "arm": "D",
+   "fpr": 0.01,
+   "heldout_fpr": 0.012412583348569008
+  },
+  {
+   "regime": 1,
+   "arm": "D",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03330273632731634
+  },
+  {
+   "regime": 2,
+   "arm": "C+",
+   "fpr": 0.01,
+   "heldout_fpr": 0.009765848086807537
+  },
+  {
+   "regime": 2,
+   "arm": "C+",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03137330294994091
+  },
+  {
+   "regime": 2,
+   "arm": "D",
+   "fpr": 0.01,
+   "heldout_fpr": 0.011726632400533028
+  },
+  {
+   "regime": 2,
+   "arm": "D",
+   "fpr": 0.03,
+   "heldout_fpr": 0.03135426620903096
+  }
+ ],
+ "seconds": 3
+}

@@ -1,0 +1,25 @@
+check,status,detail
+P5 model file SHA-256 = manifest,PASS,
+P5 dataset SHA-256 = manifest,PASS,
+P5 selection_rules SHA-256 = manifest = registered,PASS,
+P5 feature order: manifest = pipeline feature_list = booster,PASS,
+P5 booster has 237 trees = manifest n_estimators = 07,PASS,237
+"P5 calibration a, b: manifest = 07 results",PASS,"(0.9549492194448311, 0.07595876799813961)"
+P5 dev 1% threshold: manifest = 07 results,PASS,
+"P5 split: 859 dev / 136 test (52 attackers, 84 benign), disjoint",PASS,
+P5 no test user in CV folds or in the training matrix,PASS,
+P5 final model trained on dev rows only (manifest row count = dev rows),PASS,
+"P5 final model reproducible (refit vs saved file, all dev rows)",PASS,0.0e+00
+P2 booster.predict returns probabilities = sigmoid(raw margin),PASS,
+P2 risk = 100 * sigmoid(a * logit(p) + b) (manifest formula),PASS,
+"P2 risk monotone in p and bounded in (0, 100)",PASS,
+P2 manifest states the formula used here,PASS,
+P3 07 FP counts are user-level (benign users whose PEAK daily risk exceeds the threshold) and row rates are reported separately; recomputed values match,PASS,
+P3 note: 07's 1% row used each repeat's own threshold; at the FROZEN mean threshold the dev FP users are,PASS,"[6, 5, 5] of 511 per repeat (mean 5.33 = 1.04%)"
+P3 observation period per benign dev user (workdays),PASS,"median 105, min 7, max 107"
+"P4 manifest operators: high = risk > 85, medium = 60 < risk <= 85, low = risk <= 60, alert = risk > 85",PASS,
+"P4 boundary values: 60 -> Low, 60.0001 -> Medium, 85 -> Medium, 85.0001 -> High",PASS,
+P4 1% point semantics: alarm = peak > t (strict); t from threshold_at_fpr (share of peaks > t <= 1%),PASS,
+"P1 transfer: mapping applied unchanged to a final-like model (fixed 237 trees, fit+es users)",PASS,mean calibrated prediction 0.1359 vs fold models 0.1354 (observed 0.1354); ECE 0.0016 vs 0.0023 (repeat 0)
+P1 expected score-scale mismatch is small (|mean calibrated prediction diff| < 0.005),PASS,+0.0005
+P1 FP users at 85 per repeat (511 benign): final-like vs fold models,PASS,16.7 vs 15.7

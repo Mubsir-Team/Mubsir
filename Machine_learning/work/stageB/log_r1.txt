@@ -1,0 +1,5 @@
+r1_k0 done 991.3s inner best 0.8107 (trial 25) trial0 0.8045 | row AP def 0.9412 tun 0.9403 | det def 62 tun 62 / 72 fp def 1 tun 1
+r1_k1 done 1034.9s inner best 0.8284 (trial 27) trial0 0.8239 | row AP def 0.9395 tun 0.9393 | det def 61 tun 62 / 69 fp def 2 tun 2
+r1_k2 done 1600.3s inner best 0.8146 (trial 46) trial0 0.8107 | row AP def 0.9507 tun 0.9489 | det def 61 tun 59 / 70 fp def 0 tun 0
+r1_k3 done 1269.9s inner best 0.8168 (trial 44) trial0 0.8135 | row AP def 0.9474 tun 0.9480 | det def 59 tun 60 / 69 fp def 0 tun 1
+r1_k4 done 1275.6s inner best 0.8106 (trial 25) trial0 0.8079 | row AP def 0.9471 tun 0.9486 | det def 55 tun 62 / 68 fp def 1 tun 2

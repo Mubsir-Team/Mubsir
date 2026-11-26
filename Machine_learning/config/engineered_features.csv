@@ -1,0 +1,4 @@
+feature_name,channel,source_columns,calculation,time_scope,null_policy,consistency_check
+E_email_today,EMAIL,external_email_count; email_count_p50; email_count_p95,"max(0, external_email_count - email_count_p50) / max(1, email_count_p95 - email_count_p50); 0 if P50 or P95 missing",Current eligible workday,Never NaN (0 when baseline missing),E_email+E_usb+E_http summed over last w eligible workdays equals cumulative_deviation_{w}wd
+E_usb_today,USB,usb_copy_count; usb_copy_p50; usb_copy_p95,"max(0, usb_copy_count - usb_copy_p50) / max(1, usb_copy_p95 - usb_copy_p50); 0 if P50 or P95 missing",Current eligible workday,Never NaN (0 when baseline missing),same as above
+E_http_today,HTTP,www_upload_count; http_upload_p50; http_upload_p95,"max(0, www_upload_count - http_upload_p50) / max(1, http_upload_p95 - http_upload_p50); 0 if P50 or P95 missing",Current eligible workday,Never NaN (0 when baseline missing),same as above

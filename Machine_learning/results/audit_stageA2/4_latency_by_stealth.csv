@@ -1,0 +1,7 @@
+scheme,stealth,attacker_runs,detected,p25,median,p75,p90
+frozen_leave_fold_out,High,351.0,0.6695156695156695,5.0,8.0,12.0,16.0
+frozen_leave_fold_out,Low,345.0,0.9942028985507246,0.0,1.0,3.0,5.0
+frozen_leave_fold_out,Medium,348.0,0.9511494252873564,2.0,4.0,6.0,8.0
+pooled_same_set,High,351.0,0.6695156695156695,4.5,8.0,12.0,16.0
+pooled_same_set,Low,345.0,0.9942028985507246,0.0,1.0,3.0,5.0
+pooled_same_set,Medium,348.0,0.9511494252873564,2.0,4.0,6.0,8.0

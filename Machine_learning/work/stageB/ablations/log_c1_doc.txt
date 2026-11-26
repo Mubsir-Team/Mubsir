@@ -1,0 +1,14 @@
+c1_doc r0k1 AP 0.9463 det 58/69 fp 0 trees 190 22s
+c1_doc r0k2 AP 0.9570 det 64/69 fp 0 trees 261 25s
+c1_doc r0k3 AP 0.9491 det 62/69 fp 3 trees 374 23s
+c1_doc r0k4 AP 0.9490 det 62/69 fp 1 trees 283 23s
+c1_doc r1k0 AP 0.9482 det 63/72 fp 1 trees 203 22s
+c1_doc r1k1 AP 0.9496 det 62/69 fp 1 trees 276 23s
+c1_doc r1k2 AP 0.9557 det 60/70 fp 0 trees 326 24s
+c1_doc r1k3 AP 0.9564 det 62/69 fp 1 trees 264 24s
+c1_doc r1k4 AP 0.9538 det 63/68 fp 1 trees 196 21s
+c1_doc r2k0 AP 0.9492 det 62/71 fp 0 trees 322 27s
+c1_doc r2k1 AP 0.9520 det 62/70 fp 0 trees 382 23s
+c1_doc r2k2 AP 0.9594 det 63/69 fp 1 trees 287 22s
+c1_doc r2k3 AP 0.9499 det 60/69 fp 3 trees 226 14s
+c1_doc r2k4 AP 0.9555 det 62/69 fp 1 trees 212 11s

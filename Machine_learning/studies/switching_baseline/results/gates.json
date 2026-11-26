@@ -1,0 +1,185 @@
+{
+ "preregistration_sha256": "55f15d44a978c58db6a45b73c9f077de042ede430cff31dac78abaafe4da6bef",
+ "hard_gates_passed": true,
+ "g2_auc": {
+  "rate_dev_pop_10": 0.5126719921471727,
+  "excess_pop_10": 0.5188916343696583,
+  "rate_dev_pop_20": 0.5131120212567908,
+  "excess_pop_20": 0.5254836089156667,
+  "rate_dev_hab_10": 0.5671594428554505,
+  "excess_hab_10": 0.5527400274171984,
+  "rate_dev_hab_20": 0.5684710680860426,
+  "excess_hab_20": 0.5525707854519606
+ },
+ "g2_users": 689,
+ "g2_h_failed": [],
+ "g2_r_failed": [],
+ "consequence": "proceed",
+ "p1_rows": 74215,
+ "p2_cases": 1476,
+ "m0": 0.4444444444,
+ "checks": [
+  {
+   "gate": "setup",
+   "check": "P1 = 714 eligible users (347 attackers)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "ROT toy: pairs 5, changes 5, rate_dev_hab 0.6, excess_hab 3",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "BLK toy: pairs 5, changes 2, rate_dev_hab 0, excess_hab 0",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "quiet window: all features 0",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "causality: features at row t unchanged when later rows change",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G1",
+   "check": "r0 recomputed = habit_2010_dev_users.csv for 714 users (|diff| <= 1e-12)",
+   "passed": true,
+   "detail": "max 0.0e+00"
+  },
+  {
+   "gate": "setup",
+   "check": "P1 rows sorted by user then day",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "setup",
+   "check": "P2 = 123 hosts, 246 ROT and 246 BLK cases",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC rate_dev_pop_10 < 0.60",
+   "passed": true,
+   "detail": "0.513"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC excess_pop_10 < 0.60",
+   "passed": true,
+   "detail": "0.519"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC rate_dev_pop_20 < 0.60",
+   "passed": true,
+   "detail": "0.513"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC excess_pop_20 < 0.60",
+   "passed": true,
+   "detail": "0.525"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC rate_dev_hab_10 < 0.60",
+   "passed": true,
+   "detail": "0.567"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC excess_hab_10 < 0.60",
+   "passed": true,
+   "detail": "0.553"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC rate_dev_hab_20 < 0.60",
+   "passed": true,
+   "detail": "0.568"
+  },
+  {
+   "gate": "G2",
+   "check": "shortcut AUC excess_hab_20 < 0.60",
+   "passed": true,
+   "detail": "0.553"
+  },
+  {
+   "gate": "G3",
+   "check": "every restricted validation fold has >= 20 benign and >= 20 attackers",
+   "passed": true,
+   "detail": "min benign 67, min attackers 68"
+  },
+  {
+   "gate": "G3",
+   "check": "no fit/es/valid group overlap",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G3",
+   "check": "every P1 user in exactly one validation fold per repeat",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "pipeline/common.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "pipeline/models.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "pipeline/metrics.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "pipeline/05_tune.py identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "config/cv_folds.csv identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "config/selection_rules.json identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "data/model_dataset_995.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "gate": "G4",
+   "check": "work/labels.parquet identical to hashes_before.json",
+   "passed": true,
+   "detail": ""
+  }
+ ]
+}

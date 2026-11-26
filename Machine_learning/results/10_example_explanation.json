@@ -1,0 +1,43 @@
+{
+  "model_version": "mubsir-lgbm-y10-2.0.0-dev",
+  "risk_score": 99.96,
+  "base_value_logit": -3.9995,
+  "units": "calibrated log-odds contribution (a * TreeSHAP); positive = raises risk",
+  "top_features": [
+    {
+      "feature": "cumulative_deviation_10wd",
+      "value": 21.66666603088379,
+      "contribution": 4.8804,
+      "family": "Accumulation & shift (all channels)",
+      "direction": "raises risk"
+    },
+    {
+      "feature": "cumulative_deviation_20wd",
+      "value": 30.08333396911621,
+      "contribution": 1.6868,
+      "family": "Accumulation & shift (all channels)",
+      "direction": "raises risk"
+    },
+    {
+      "feature": "email_event_count",
+      "value": 12.0,
+      "contribution": 0.8638,
+      "family": "Email",
+      "direction": "raises risk"
+    },
+    {
+      "feature": "http_event_count",
+      "value": 105.0,
+      "contribution": 0.6896,
+      "family": "HTTP / web",
+      "direction": "raises risk"
+    },
+    {
+      "feature": "cumulative_deviation_5wd",
+      "value": 12.333333015441895,
+      "contribution": 0.4942,
+      "family": "Accumulation & shift (all channels)",
+      "direction": "raises risk"
+    }
+  ]
+}

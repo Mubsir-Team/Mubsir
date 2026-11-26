@@ -1,0 +1,6 @@
+channel_configuration,detected_3of3,missed_3of3,unstable,All
+E+H,4,2,0,6
+E+U,4,9,1,14
+E+U+H,5,2,3,10
+U+H,7,8,1,16
+All,20,21,5,46

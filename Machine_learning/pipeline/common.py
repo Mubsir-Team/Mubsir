@@ -1,57 +1,118 @@
-"""Shared config + helpers for the Mubsir v2 pipeline (r6.2, 995-user pool)."""
-import os
+"""
+MUBSIR (new dataset) — shared paths, constants and helpers for the pipeline.
+
+Every script in this folder imports from here. Nothing in this module reads
+ground-truth columns into the predictor matrix: predictors come only from the
+approved allowlist (config/training_predictor_allowlist.csv, decision == keep)
+plus the 3 engineered features (config/engineered_features.csv).
+"""
+
+import hashlib
+import json
 from pathlib import Path
-import numpy as np, pandas as pd
-from sklearn.metrics import average_precision_score, roc_auc_score, brier_score_loss, roc_curve
 
-PKG = Path(__file__).resolve().parent
-_CANDIDATES = [PKG / "data" / "Clear_Attack_Simulation", PKG.parents[1] / "Clear_Attack_Simulation"]   # local copy, or the team's folder at the repository root
-ROOT = Path(os.environ.get("MUBSIR_DATA") or next((c for c in _CANDIDATES if c.exists()), _CANDIDATES[0]))   # source data (override with MUBSIR_DATA)
-WORK = Path(os.environ.get("MUBSIR_WORK", PKG / "data" / "work"))                      # derived feature tables (override with MUBSIR_WORK)
-MODEL = PKG.parent / "model"                                                           # deployable bundle (manifest + boosters + mubsir_infer.py)
-RES = PKG / "results"
-WORK.mkdir(parents=True, exist_ok=True); RES.mkdir(parents=True, exist_ok=True)
+import numpy as np
+import pandas as pd
 
-ML_FINAL = ROOT / "data/final/behavior_features_r62_ml_final.parquet"
-GT_USERS = ROOT / "data/ground_truth/ground_truth_users.parquet"
-GT_USER_DAYS = ROOT / "data/ground_truth/ground_truth_user_days.parquet"
-ASSIGN = ROOT / "data/stages_output/validated_scenario_assignments_r62.parquet"
-POOL = PKG / "inputs/pool_995_roles_r62.csv"
-PREPARED = WORK / "prepared_995.parquet"
-SPLIT = RES / "user_split.csv"
-
-WINDOWS = [5, 10, 20]
 SEED = 42
-# 23 per-user constant baseline columns (computed on 2010 only)
-STATIC = (["baseline_workdays"]
-          + [f"email_{k}" for k in ["active_days", "active_rate", "count_p50", "count_p90", "count_p95", "count_mad",
-                                    "bytes_p50", "bytes_p90", "bytes_p95", "bytes_mad"]]
-          + [f"usb_{k}" for k in ["active_days", "active_rate", "copy_p50", "copy_p90", "copy_p95", "copy_mad"]]
-          + [f"http_upload_{k}" for k in ["active_days", "active_rate", "p50", "p90", "p95", "mad"]])
-NON_FEATURES = ["user", "day", "first_logon", "last_logoff", "is_weekend", "y", "group", "stealth", "scenario_id", "part"] \
-               + [f"y_{h}" for h in WINDOWS] + [f"yf_{h}" for h in WINDOWS]
+CV_SEEDS = (42, 43, 44)          # 3 repeats of 5-fold grouped CV on dev
+N_FOLDS = 5
+ES_FRACTION_SPLITS = 7           # 1/7 ~ 14-15% of fold-train users held out for early stopping
+HORIZONS = (5, 10, 20)           # candidate label horizons (workdays); one is selected
+DEFAULT_HORIZON = 10
+FPR_POINTS = (0.01, 0.05)
+
+PIPELINE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = PIPELINE_DIR.parent
+ROOT = MODEL_DIR.parent
+NAS = ROOT / "New_Attack_Simulation" / "reports"
+
+CONFIG = MODEL_DIR / "config"
+DATA = MODEL_DIR / "data"
+WORK = MODEL_DIR / "work"
+RESULTS = MODEL_DIR / "results"
+REPORTS = MODEL_DIR / "reports"
+for _d in (WORK, RESULTS, REPORTS):
+    _d.mkdir(exist_ok=True)
+
+# Inputs (read-only)
+DATASET = DATA / "model_dataset_995.parquet"
+ALLOWLIST = CONFIG / "training_predictor_allowlist.csv"
+ENGINEERED = CONFIG / "engineered_features.csv"
+ELIGIBLE = CONFIG / "eligible_users_995.csv"
+OLD_SPLIT = CONFIG / "user_split.csv"            # legacy 70/15/15 split from prepare_dataset.py
+SRC_SCENARIOS = NAS / "08_Attacker_Selection_and_Scenario_Assignment" / "approved_attacker_scenarios_r62.parquet"
+SRC_CANDIDATES = NAS / "03_Channel_Behavior_Audit" / "candidate_behavior_profile.parquet"
+SRC_GT_USER_DAYS = NAS / "11_Ground_Truth_and_Quality_Validation" / "ground_truth_user_days_r62.parquet"
+
+# Outputs of the pipeline
+LABELS = WORK / "labels.parquet"                 # user, day, y, y_5, y_10, y_20
+EVAL_META = WORK / "eval_meta.parquet"           # per-row evaluation context (never predictors)
+USER_META = CONFIG / "user_meta.csv"             # per-user evaluation context (never predictors)
+FINAL_SPLIT = CONFIG / "final_split.csv"         # user -> dev / test
+CV_FOLDS = CONFIG / "cv_folds.csv"               # user x repeat x fold -> fit / es / valid
+SELECTION_RULES = CONFIG / "selection_rules.json"
+
+KEYS = ["user", "day"]
+# Columns that must never be predictors (ground truth, scenario design, keys, legacy split)
+FORBIDDEN = {
+    "y", "y_5", "y_10", "y_20", "user", "day", "split", "first_logon", "last_logoff",
+    "scenario_option_id", "scenario_type_id", "window_workdays", "window_start", "window_end",
+    "channel_configuration", "switching_level", "stealth_level", "stealth_multiplier",
+    "forced_offdays", "proposed_active_days", "set_switch_bitmask", "is_attack_day",
+    "is_active_day", "is_forced_offday", "day_type", "injected_channels", "sync_type",
+    "executed_channel_count", "is_attacker", "schedule_signature",
+}
 
 
-def feature_cols(df, include_static=True, static_only=False):
-    cols = [c for c in df.columns if c not in NON_FEATURES]
-    if static_only:
-        return [c for c in cols if c in STATIC]
-    if not include_static:
-        cols = [c for c in cols if c not in STATIC]
-    return cols
+class CheckFailed(SystemExit):
+    pass
 
 
-def select_features(df, mode):
-    return feature_cols(df, include_static=(mode == "full"), static_only=(mode == "static"))
+CHECKS = []
 
 
-def recall_at_fpr(y, s, fpr):
-    f, t, _ = roc_curve(y, s)
-    return float(np.interp(fpr, f, t))
+def check(name, condition, detail=""):
+    """Record a check and stop the run on the first failure."""
+    CHECKS.append((name, bool(condition), str(detail)))
+    print(f"[{'PASS' if condition else 'FAIL'}] {name}  {detail}")
+    if not condition:
+        raise CheckFailed(f"STOPPED — check failed: {name} ({detail})")
 
 
-def row_metrics(y, s):
-    y = np.asarray(y); s = np.asarray(s)
-    return dict(pr_auc=average_precision_score(y, s), roc_auc=roc_auc_score(y, s),
-                rec_fpr1=recall_at_fpr(y, s, 0.01), rec_fpr5=recall_at_fpr(y, s, 0.05),
-                brier=brier_score_loss(y, np.clip(s, 0, 1)), prevalence=float(y.mean()))
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def feature_list():
+    """The 100 approved predictors, in allowlist order then engineered order."""
+    allow = pd.read_csv(ALLOWLIST)
+    eng = pd.read_csv(ENGINEERED)
+    feats = allow.loc[allow["decision"] == "keep", "feature_name"].tolist() + eng["feature_name"].tolist()
+    assert len(feats) == 100 and len(set(feats)) == 100, len(feats)
+    assert not (set(feats) & FORBIDDEN), set(feats) & FORBIDDEN
+    return feats
+
+
+def load_dataset():
+    """Model dataset sorted by (user, day). The legacy `split` column is dropped."""
+    df = pd.read_parquet(DATASET).drop(columns=["split"])
+    return df.sort_values(KEYS).reset_index(drop=True)
+
+
+def write_json(path, obj):
+    Path(path).write_text(json.dumps(obj, indent=2, default=str), encoding="utf-8")
+
+
+def md_table(df, index=True, floatfmt="{:.4f}"):
+    d = df.reset_index() if index else df
+    cols = [str(c) for c in d.columns]
+    lines = ["| " + " | ".join(cols) + " |", "|" + "---|" * len(cols)]
+    for row in d.itertuples(index=False):
+        vals = [floatfmt.format(v) if isinstance(v, (float, np.floating)) else str(v) for v in row]
+        lines.append("| " + " | ".join(vals) + " |")
+    return "\n".join(lines)

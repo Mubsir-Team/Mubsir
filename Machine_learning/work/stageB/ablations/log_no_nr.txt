@@ -1,0 +1,14 @@
+no_nr r0k1 AP 0.9394 det 58/69 fp 0 trees 212 16s
+no_nr r0k2 AP 0.9492 det 61/69 fp 0 trees 267 16s
+no_nr r0k3 AP 0.9420 det 59/69 fp 1 trees 179 15s
+no_nr r0k4 AP 0.9436 det 63/69 fp 1 trees 373 20s
+no_nr r1k0 AP 0.9388 det 63/72 fp 1 trees 149 14s
+no_nr r1k1 AP 0.9411 det 62/69 fp 0 trees 309 20s
+no_nr r1k2 AP 0.9488 det 61/70 fp 0 trees 353 17s
+no_nr r1k3 AP 0.9500 det 61/69 fp 2 trees 265 17s
+no_nr r1k4 AP 0.9435 det 59/68 fp 1 trees 116 18s
+no_nr r2k0 AP 0.9388 det 55/71 fp 0 trees 221 19s
+no_nr r2k1 AP 0.9413 det 60/70 fp 0 trees 380 18s
+no_nr r2k2 AP 0.9483 det 60/69 fp 1 trees 258 17s
+no_nr r2k3 AP 0.9454 det 59/69 fp 5 trees 356 19s
+no_nr r2k4 AP 0.9478 det 61/69 fp 2 trees 200 18s

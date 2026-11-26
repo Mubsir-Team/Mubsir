@@ -1,0 +1,10 @@
+{
+ "dev_users": 859,
+ "attackers": 348,
+ "benign": 511,
+ "rows": 89471,
+ "repeats": 3,
+ "benign_employee_months": 2535.3809523809523,
+ "all_employee_months": 4260.523809523809,
+ "benign_daily_exceedance_rate_85": 0.000926569376882094
+}
