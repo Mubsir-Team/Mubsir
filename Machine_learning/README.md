@@ -27,6 +27,8 @@ Test prevalence (38%) is far higher than in production, so precision will be low
 
 | Path | What it is |
 |---|---|
+| `Final_Detailed_Report.md` | **Full report**: data, method, model selection, all test metrics, figures, studies, limitations |
+| `Common-Q&A.md` | 33 common questions with short and detailed answers |
 | `model/` | **Frozen model bundle**: model file, manifest, `mubsir_infer.py`, `verify_bundle.py`, SHA-256 sums |
 | `pipeline/` | The pipeline, scripts `01`–`14`, run in order, plus `common.py`, `models.py` and `metrics.py` |
 | `prepare_dataset.py` | Builds `data/model_dataset_995.parquet` from the simulation output |
